@@ -1,0 +1,424 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Access por Resultados - 1&ordm; Tutorial - Boas vindas ao MS Access</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.74.0"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article" lang="pt"><div class="titlepage"><div><div><h2 class="title"><a name="d4e1"></a>Access por Resultados - 1&ordm; Tutorial - Boas vindas ao
+    <span class="trademark">MS Access</span>&#8482;</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Gil</span> <span class="surname">Jr. </span></h3></div></div><div><p class="pubdate">28/11/2009</p></div></div><hr></div><div class="toc"><p><b>&Iacute;ndice</b></p><dl><dt><span class="section"><a href="#d4e14">1. Introdu&ccedil;&atilde;o</a></span></dt><dt><span class="section"><a href="#d4e34">2. Sistema de Gerenciamento de Bancos de Dados - SGBD</a></span></dt><dt><span class="section"><a href="#d4e59">3. Estruturando um Banco de Dados</a></span></dt><dd><dl><dt><span class="section"><a href="#d4e79">3.1. Etapa 1 - Determine o prop&oacute;sito de seu banco de dados</a></span></dt><dt><span class="section"><a href="#d4e90">3.2. Etapa 2 - Determine as tabelas que voce precisa</a></span></dt><dt><span class="section"><a href="#d4e97">3.3. Etapa 3 - Determine os campos necess&aacute;rios</a></span></dt><dt><span class="section"><a href="#d4e102">3.4. Etapa 4 - Determine o relacionamento</a></span></dt><dt><span class="section"><a href="#d4e135">3.5. Etapa 5 - Refine a estrutura do banco de dados</a></span></dt></dl></dd><dt><span class="section"><a href="#d4e150">4. Conclus&atilde;o</a></span></dt><dt><span class="section"><a href="#d4e163">5. Recursos</a></span></dt><dt><span class="section"><a href="#d4e170">6. Sobre o autor</a></span></dt><dt><span class="glossary"><a href="#d4e175">Gloss&aacute;rio</a></span></dt></dl></div>
+  
+
+  <div class="abstract"><p class="title"><b>Resumo</b></p>
+    <p><span class="emphasis"><em>Sum&aacute;rio: O</em></span> uso como ferramenta de trabalho do
+    MS Access &eacute; relativamente pouco difundida em nosso meio.</p>
+
+    <p>Ao depararmos, em nosso trabalho, com a necessidade de us&aacute;-lo,
+    descobrimos que poucos se aventuram nessa empreita. </p>
+
+    <p>Mergulhamos nessa s&eacute;rie de tutoriais em uma tentativa de
+    incentiv&aacute;-lo a usar MS Access: um banco de dodos fabuloso, com um
+    repert&oacute;rio de recursos vast&iacute;ssimos, que pode nos trazer benef&iacute;cios, entre
+    os quais destaco: re-utiliza&ccedil;ao de planilhas, consultas, tabelas,
+    relat&oacute;rios, entre outros; &eacute; certo que quanto mais se usa uma ferramenta,
+    mais benef&iacute;cios pode-se alcan&ccedil;ar. Esse trabalho visa exatamente isto:
+    desmistificar o uso do MS Access. Bem-vindo e boa leitura!</p>
+  </div>
+
+  <div class="section" lang="pt"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e14"></a>1. Introdu&ccedil;&atilde;o</h2></div></div></div>
+    
+
+    <p>Usar o MS Access &eacute; desafiante, mas prazeiroso!</p>
+
+    <p>A interface do programa n&atilde;o se parece com outras que estamos
+    mais acostumados, como o <span class="trademark">MS Excel</span>&#8482; e o <span class="trademark">MS
+    Word</span>&#8482;.</p>
+
+    <p>Por&eacute;m &eacute; o mais pr&oacute;ximo que o usu&aacute;rio possa chegar do programador; em
+    outras palavras, pode-se chegar mais longe ainda do que estamos
+    acustumados com os editores e planilhas comuns, automatizando tabelas,
+    consultas e relat&oacute;rios, e melhor, reaproveitando-os.</p>
+
+    <p>Nos aventuramos nessa s&eacute;rie de tutoriais, tentando incuti-lhe o
+    prazer de usar essa ferramenta: MS Access.</p>
+
+    <p>O MS Access &eacute; um banco de dados fabuloso, com um repert&oacute;rio de
+    recursos vast&iacute;ssimos - v&aacute;rios por mim ainda sendo descobertos...</p>
+
+    <p>Seus benef&iacute;cios para o nosso dia a dia s&atilde;o in&uacute;meros, e no
+    caso espec&iacute;fico da Opera&ccedil;&atilde;o Ecf, &uacute;nica alternativa que encontramos,
+    frente algumas circusnt&acirc;ncias.</p>
+
+    <p>O limite de linhas de uma planilha no MS Excel s&atilde;o facilmente
+    alcan&ccedil;ados devido ao tamanho dos arquivos gerados pelo programa
+    eECFc.</p>
+
+    <p>A administra&ccedil;&atilde;o de in&uacute;meros e enormes arquivos &eacute; a
+    oportunidade de usar recursos de um banco de dados.</p>
+
+    <p>Como dito, pode-se reutilizar planilhas, consultas, tabelas e
+    relat&oacute;rios no MS Access; pode-se importar artefatos de outros bancos de
+    dados, ou seja, reaproveitar esfor&ccedil;os, evitando o reatrabalho, ou
+    &#8220;<span class="quote">reinventar a roda!</span>&#8221;. Nada de rotinas como selecionar /
+    copiar / colar / modificar que nos levam facilmente a erros. Nada de
+    redigitalizar dados em editores de texto: nossos dados s&atilde;o
+    guardados em banco de dados uma &uacute;nica vez e s&atilde;o reutiliz&aacute;veis,
+    normatizados e inseridos nos lugares certos em relat&oacute;rios, etiquetas...
+    voc&ecirc; escolhe!</p>
+
+    <p>Apreender a melhor t&eacute;cnica exige determina&ccedil;&atilde;o, interesse e
+    disciplina. Estamos prontos para aprimorarmos nossa solu&ccedil;&atilde;o
+    mediante sugest&otilde;es. M&atilde;os &agrave; obra!</p>
+
+    <p>Esse trabalho visa incentivar o uso MS Access.</p>
+
+    <p>Entramos diretamente no ponto: os exemplos ser&atilde;o extra&iacute;dos do
+    nosso dia a dia, especificamente da opera&ccedil;&atilde;o ECF.</p>
+
+    <p>Pouca teoria; definimos o que queremos e implementamos a
+    solu&ccedil;&atilde;o.</p>
+
+    <p>Aprender as t&eacute;cnicas direcionando-nos para resultados.</p>
+
+    <p>Access por resultado!</p>
+  </div>
+
+  <div class="section" lang="pt"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e34"></a>2. Sistema de Gerenciamento de Bancos de Dados - SGBD</h2></div></div></div>
+    
+
+    <p>Um banco de dados &eacute; uma cole&ccedil;&atilde;o de dados. H&aacute; v&aacute;rias
+    estrat&eacute;gias para organiza&ccedil;&atilde;o das informa&ccedil;&otilde;es de modo a
+    facilitar o seu acesso e manipula&ccedil;&atilde;o.</p>
+
+    <p>Sistemas de Gerenciamento de Banco de Dados (<em class="glossterm">database
+    management system </em>- DBMS) fornecem mecanismos para
+    armazenamento, organiza&ccedil;&atilde;o, resgaste e modifica&ccedil;&atilde;o de dados
+    pelos usu&aacute;rios; o acesso aos dados pelos usu&aacute;rios pode ser simult&acirc;neo e
+    m&uacute;ltiplo.</p>
+
+    <p>Banco de dados relacionais s&atilde;o os mais usados atualmente.
+    Vamos entend&ecirc;-los e descobrir o porqu&ecirc; s&atilde;o a &uacute;ltima
+    palavra em termos de banco de dados.</p>
+
+    <p>V&aacute;rias empresas lan&ccedil;aram suas implementa&ccedil;&otilde;es de SGBD;
+    produtos tais como Microsoft SQL Server, Oracle, MySQL, Infomix,
+    PostgreSQL, Java DB (vers&atilde;o da Sun do Apache Derby ), Firebird
+    s&atilde;o largamente utilizados pelos programadores.</p>
+
+    <p>Cada um desses produtos oferecem <em class="glossterm">driver</em>,
+    interface necess&aacute;rias para nos comunicarmos com o banco de dados
+    espec&iacute;fico.</p>
+
+    <p>Esses driver normalmente s&atilde;o forrnecidos para uma linguagem
+    espec&iacute;fica: java, Cobol, Cliper, Piton, etc.</p>
+
+    <p>De posse desse driver pode o programador acessar os dados
+    armazenados no banco de dados independente de sua representa&ccedil;&atilde;o
+    interna.</p>
+
+    <p>Independente de sua representa&ccedil;&atilde;o interna ? o que isso
+    significa nesse contexto.</p>
+
+    <p>Imagine que estamos armazenando dados em uma planilha do MS Excel,
+    por exemplo; temos duas alternativas: ou acessamos os dados via o pr&oacute;prio
+    programa MS Excel, ou teremos que descobrir a representa&ccedil;&atilde;o interna
+    dos dados em uma planilha eletr&ocirc;nica para manipula-los, algo dif&iacute;cil e
+    penoso para programar: uma odiss&eacute;ia! se precisamos usar os dados num
+    editor de texto, precisamos saber sobre compatibilidades de arquivos...um
+    emaranhado se apresenta, e o problema &eacute; inicial e sem fim...</p>
+
+    <p>Acontece ainda que o MS Excel &eacute; uma planilha eletr&ocirc;nica e n&atilde;o
+    um banco de dados...</p>
+
+    <p>A melhor solu&ccedil;&atilde;o, se quisermos organizar informa&ccedil;&otilde;es
+    sistematicamente para reutiliz&aacute;-las em diversas tarefas, &eacute; usar um SGBD,
+    que &eacute; a pr&oacute;pria ess&ecirc;ncia do instrumento: gerenciar bancos de
+    dados.</p>
+
+    <p>O MS Access &eacute; uma implementa&ccedil;&atilde;o de um SGBD da
+    <span class="trademark">Microsoft</span>&#8482;.</p>
+
+    <p>Existe uma linguagem neutra, comum a todos os SGBD, que opera todas
+    as consultas que necessitamos para utilizarmos um banco de dados:
+    <em class="glossterm">SQL</em>.</p>
+
+    <p>SQL, <em class="glossterm">Standard Queries Language</em> &eacute; uma
+    linguagem universal de procedimentos de consultas em bancos de dados
+    relacionais.</p>
+
+    <p>Possui sintaxe simples, por&eacute;m poderosa; algo como <code class="code">SELECT *
+    FROM Contribuinte</code>, que se constitui em um camando SQL que seleciona
+    e retorna todos campos da tabela Contribuinte. Existem v&aacute;rios outros
+    comandos, tais com INSERT, UPDATE, DELETE, que interagem com o banco de
+    dados, independente de sua representa&ccedil;&atilde;o interna ou
+    implementa&ccedil;&atilde;o. Retornaremos ao assunto mais adiante, em outro
+    tutorial.</p>
+
+    <p>Atrav&eacute;s da SQL &eacute; que interagimos com o banco de dados
+    programaticamente, resgatando informa&ccedil;&otilde;es necess&aacute;rias aos
+    relat&oacute;rios, planilhas, e similares, que precisamos, assumindo certos
+    crit&eacute;rios, para satisfazer os nossos requerimentos de consultas,
+    inser&ccedil;&otilde;es, etc.</p>
+
+    <p>O MS Access esconde do usu&aacute;rio comum as peculiaridades da linguagem
+    SQL, buscando uma abstra&ccedil;&atilde;o que facilita a intera&ccedil;&atilde;o desse
+    usu&aacute;rio com o banco de dados; por&eacute;m, em se ententendo a linguagem,
+    auferimos maior poder de consulta &agrave;s nossas rotinas. Em &uacute;ltima
+    an&aacute;lise, passaremos a ser considerados usu&aacute;rios mais avan&ccedil;ados. Portanto
+    investir no conhecimento da linguagem SQL &eacute; recomend&aacute;vel.</p>
+  </div>
+
+  <div class="section" lang="pt"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e59"></a>3. Estruturando um Banco de Dados</h2></div></div></div>
+    
+
+    <p>Aqui est&atilde;o as etapas utilizadas no processo de
+    estrutura&ccedil;&atilde;o de um banco de dados.</p>
+
+    <p>Cada etapa ser&aacute; discutida em maiores detalhes nos trabalhos
+    remanescentes dessa s&eacute;rie.</p>
+
+    <div class="itemizedlist"><ul type="disc"><li>
+        <p>Etapa 1 - <span class="emphasis"><em>determine o prop&oacute;sito do seu banco de
+        dados</em></span> - isso ajuda a decidir quais dados ser&atilde;o
+        armazenados pelo Ms Access.</p>
+      </li><li>
+        <p>Etapa 2 - <span class="emphasis"><em>determine as tabelas que voc&ecirc;
+        precisa</em></span> - ap&oacute;s decidir o prop&oacute;sito, divida as
+        informa&ccedil;&otilde;es em assuntos diferentes (contextos diversos); cada
+        assunto ir&aacute; compor uma tabela do seu banco de dados.</p>
+      </li><li>
+        <p>Etapa 3 - <span class="emphasis"><em>determine os campos necess&aacute;rios</em></span> -
+        cada categoria de informa&ccedil;&atilde;o &eacute; chamada de campo e &eacute; mostrada
+        como uma coluna independente na tabela.</p>
+      </li><li>
+        <p>Etapa 4 - <span class="emphasis"><em>determine os relacionamentos</em></span> -
+        decida como os dados de uma tabela se relacionam com os dados de
+        outras tabelas.</p>
+      </li><li>
+        <p>Etapa 5 - <span class="emphasis"><em>refine a estrutura do banco de
+        dados</em></span> - verifique inicialmente se consegue obter os
+        resultados desejados em suas tabelas. Caso necess&aacute;rio, reajuste a
+        estrutura de seu banco de dados.</p>
+      </li></ul></div>
+
+    <div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d4e79"></a>3.1. Etapa 1 - Determine o prop&oacute;sito de seu banco de dados</h3></div></div></div>
+      
+
+      <p>O primeiro passo na cria&ccedil;&atilde;o de um banco de dados &eacute; a
+      determina&ccedil;&atilde;o do objetivo do banco de dados e de como ser&aacute;
+      utilizado. Isso indicar&aacute; o tipo de informa&ccedil;&atilde;o a ser obtida. A
+      partir da&iacute;, pode-se determinar os assuntos (tabelas) a serem
+      introduzidos no banco de dados e quais os dados (campos) a serem
+      armazenados, para cada assunto.</p>
+
+      <p>Nosso objetivo: Gerar o "Termo de Leitura e C&oacute;pia de Dados
+      Gravados em ECF", conforme figura abaixo.</p>
+
+      <div class="figure"><a name="d4e83"></a><p class="title"><b>Figura 1. Termo de Leitura e C&oacute;pia de Dados Gravados em ECF</b></p><div class="figure-contents">
+        
+
+        <div class="screenshot">
+          
+
+          <div class="mediaobject"><img src="Termo.png" alt="Termo de Leitura e C&oacute;pia de Dados Gravados em ECF"></div>
+        </div>
+      </div></div><br class="figure-break">
+    </div>
+
+    <div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d4e90"></a>3.2. Etapa 2 - Determine as tabelas que voce precisa</h3></div></div></div>
+      
+
+      <p>Consulte o formul&aacute;rio anterior.</p>
+
+      <p>O pr&oacute;prio formul&aacute;rio nos d&aacute; dicas de tabelas candidatas; perceba
+      as divis&otilde;es internas no formul&aacute;rio.</p>
+
+      <p>Tr&ecirc;s se&ccedil;&otilde;es distintas se apresentam: Dados do
+      Estabelecimento, Dados da Ecf e Autentica&ccedil;&atilde;o de Arquivos.</p>
+
+      <p>Tr&ecirc;s tabelas podemos ent&atilde;o formar: Contribuinte, Ecf
+      e ArquivoAutenticado.</p>
+
+      <p>S&atilde;o assuntos (contextos) diferentes, merecedores de tabelas
+      separadas.</p>
+    </div>
+
+    <div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d4e97"></a>3.3. Etapa 3 - Determine os campos necess&aacute;rios</h3></div></div></div>
+      
+
+      <p>Transcrevendo os dados do formul&aacute;rio, ter&iacute;amos os campos:
+      Raz&atilde;o Social, Inscri&ccedil;&atilde;o Estadual, Cnpj e Endere&ccedil;o para
+      tabela Contribuintes;</p>
+
+      <p>Os campos Marca, Modelo, Vers&atilde;o Software B&aacute;sico e n&uacute;mero de
+      Fabrica&ccedil;&atilde;o para a tabela Ecf;</p>
+
+      <p>E finalmente, os campos Nome do Arquivo Autenticado, sua chave MD5
+      e SHA1, repetidos quatro vezes, para a tabela ArquivoAutenticado (no
+      m&aacute;ximo, por termo, s&oacute; podemos autenticar quatro arquivos).</p>
+    </div>
+
+    <div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d4e102"></a>3.4. Etapa 4 - Determine o relacionamento</h3></div></div></div>
+      
+
+      <p>O SGBD usa o relacionamento entre as tabelas para encontrar a
+      informa&ccedil;&atilde;o solicitada.</p>
+
+      <p>Voc&ecirc; define o relacionamento entre as tabelas.</p>
+
+      <p>No nosso exemplo analisemos a rela&ccedil;&atilde;o entre as tabelas
+      <span class="database">Contribuinte</span> X <span class="database">Ecf</span>:</p>
+
+      <p>Cada <span class="database">Contribuinte</span> possui nenhuma, uma ou
+      v&aacute;rias <span class="database">Ecf</span> (Rela&ccedil;&atilde;o zero ou
+      <em class="glossterm">Rela&ccedil;&atilde;o um-para-v&aacute;rias</em>); Cada
+      <span class="database">Ecf</span> pertence, num determinado tempo, a apenas um
+      <span class="database">Contribuinte</span> (<em class="glossterm">Rela&ccedil;&atilde;o
+      um-para-um</em> implementada pela inser&ccedil;&atilde;o do campo
+      CodigoContribuinte na tabela Ecf);</p>
+
+      <p>Quanto &agrave; rela&ccedil;&atilde;o <span class="database">Contribuinte</span> X
+      <span class="database">ArquivoAutenticado</span> X <span class="database">Ecf</span>: cada
+      arquivo autenticado refere-se apenas a um Contribuinte e a uma Ecf
+      (implementa&ccedil;&atilde;o feita pela inser&ccedil;&atilde;o dos campos
+      <span class="database">codigoContribuinte</span> e <span class="database">CodigoEcf</span>
+      na tabela <span class="database">ArquivoAutenticado</span>); por&eacute;m, cada
+      Contribuinte e cada Ecf podem ter mais de um arquivo autenticado - a
+      rela&ccedil;&atilde;o <span class="database">Contribuinte</span> X
+      <span class="database">ArquivoAutenticado</span> e <span class="database">Ecf</span> X
+      <span class="database">ArquivoAutenticado</span> &eacute; do tipo um-para-v&aacute;rias.
+      Perceba os s&iacute;mbolos de infinito (&#8734;) e 1, identificando as
+      rela&ccedil;&otilde;es: 1 Contribuinte pode ter v&aacute;rios/infinitos (&#8734;)
+      ArquivoAutenticado(s); cada ArquivoAutenticado concerne a apenas 1
+      Ecf...</p>
+
+      <p>Pronto, decidido as rela&ccedil;&otilde;es entre as tabelas, vamos
+      concretiz&aacute;-las:</p>
+
+      <div class="figure"><a name="d4e128"></a><p class="title"><b>Figura 2. Relacionamento entre as tabelas</b></p><div class="figure-contents">
+        
+
+        <div class="screenshot">
+          
+
+          <div class="mediaobject"><img src="gre_00.jpg" alt="Relacionamento entre as tabelas"></div>
+        </div>
+      </div></div><br class="figure-break">
+    </div>
+
+    <div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d4e135"></a>3.5. Etapa 5 - Refine a estrutura do banco de dados</h3></div></div></div>
+      
+
+      <p>Nessa fase acrescemos alguns campos que achamos
+      pertinentes.</p>
+
+      <p>Para a tabela <span class="database">Contribuinte</span>, acrescemos
+      Munic&iacute;pio, Unidade da Federa&ccedil;&atilde;o e Cep, por raz&otilde;es
+      &oacute;bvias.</p>
+
+      <p>Para a tabela <span class="database">Ecf</span>, acrescemos outros dados
+      constantes do arquivo extra&iacute;do do Sitafe, quais sejam: n&uacute;mero do Ato
+      Cotepe, n&uacute;mero do Pedido de Uso/Cessa&ccedil;&atilde;o, n&uacute;mero gerado pelo
+      Sitafe (do PAT), n&uacute;mero da vers&atilde;o atual e a encontrada pela
+      fiscaliza&ccedil;&atilde;o, campos necess&aacute;rios para trabalhos futuros.</p>
+
+      <p>O campo <span class="database">Atualizado</span> registra automaticamente a
+      data de cria&ccedil;&atilde;o do registro, para rastreabilidade; constitui-se
+      em <span class="emphasis"><em>boas pr&aacute;ticas na estrutura&ccedil;&atilde;o do banco de
+      dados</em></span>, assunto que retornarei em breve.</p>
+
+      <p>E finalmente a tabela <span class="database">ArquivoAutenticado</span>,
+      acrescemos os campos que a relaciona com as outras tabelas:
+      <span class="database">CodigoContribuinte</span> e <span class="database">CodigoEcf</span>
+      (ver figura 2), definindo o banco de dados como relacional.</p>
+
+      <p>Ent&atilde;o cada ArquivoAutenticado &eacute; marcado - &eacute; &uacute;nico -
+      mediante a adi&ccedil;&atilde;o de dois campos - as chaves pr&iacute;m&aacute;rias das outras
+      tabelas.</p>
+    </div>
+  </div>
+
+  <div class="section" lang="pt"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e150"></a>4. Conclus&atilde;o</h2></div></div></div>
+    
+
+    <p>Nesse primeiro tutorial, de posse de apenas um documento,
+    estruturamos um bancos de dados relacional.</p>
+
+    <p>Colecionar os documentos que se quer armazenar &eacute; tarefa pr&iacute;m&aacute;ria
+    para a forma&ccedil;&atilde;o do banco de dados.</p>
+
+    <p>Discutimos o significado de sistemas de gerenciamento de bancos de
+    dados, SQL e as etapas necess&aacute;rias para se formar um banco de
+    dados.</p>
+
+    <p>Num pr&oacute;ximo encontro, entraremos em detalhes conceituais, usando o
+    MS Access no que concerne a inicializa&ccedil;&atilde;o das tabelas, campos,
+    consultas e relat&oacute;rios, afim de chegarmos ao abjetivo inicial proposto por
+    esse trabalho: Imprimir o Termo de Leitura e C&oacute;pia de Dados gravados em
+    Ecf. Acrescentaremos alguns conceitos fundamentais para o entendimento de
+    banco de dados relacionais, quais sejam: chaves prim&aacute;rias, chaves
+    externas, normatiza&ccedil;&otilde;es, regras, entidades e outros.</p>
+
+    <p>Como observa&ccedil;&atilde;o final, perceba as conven&ccedil;&otilde;es
+    utilizadas nesse trabalho: os nomes das tabelas e campos s&atilde;o
+    substantivos singulares, sem sinais diacr&iacute;ticos, e sempre iniciam com
+    letra mai&uacute;scula (Ecf); se a palavra &eacute; um substantivo composto (ou
+    adjetivo-substantivado), a letra de jun&ccedil;&atilde;o das duas palavras &eacute;
+    capitalizada (ArquivoAutenticado); n&atilde;o separamos as
+    palavras.</p>
+
+    <p>Procure nomes significativos; a sem&acirc;ntica importa; o nome da tabela,
+    por exemplo, representa cada objeto que nela est&aacute; armazenado.</p>
+
+    <p>O motivo de tais conven&ccedil;&otilde;es prov&eacute;m de experi&ecirc;ncias
+    anteriores de estudiosos no assunto; cada artefato (uma tabela, um campo)
+    &eacute; tratado como um objeto, da&iacute; melhor nome&aacute;-los de maneira consistente,
+    para futuramente, ao necessitarmos cit&aacute;-los, saberemos seu nome e formato
+    prov&aacute;veis.</p>
+
+    <p>A conven&ccedil;&atilde;o de nomes &eacute; opcional, mas altamente
+    recomend&aacute;vel</p>
+
+    <p>Voce pode escolher a conven&ccedil;&atilde;o que melhor se adeque &agrave;s
+    suas necessidades; por&eacute;m, uma vez escolhida, adote-a permanente e
+    consistentemente: </p><div class="blockquote"><blockquote class="blockquote">
+        <p>A consist&ecirc;ncia do banco de dados est&aacute; diretamente
+        relacionado a consist&ecirc;ncia da nomenclatura adotada pelo seu
+        autor</p>
+      </blockquote></div><p>Obrigado, e at&eacute; o pr&oacute;ximo encontro.</p>
+  </div>
+
+  <div class="section" lang="pt"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e163"></a>5. Recursos</h2></div></div></div>
+    
+
+    <p>O site da Oficial da Microsoft &eacute; bem did&aacute;tico e merece uma visita
+    (<a class="ulink" href="http://office.microsoft.com/pt-br/access/default.aspx" target="_top">http://office.microsoft.com/pt-br/access/default.aspx</a>).</p>
+
+    <p>Esse outro site (<a class="ulink" href="http://www.databasedev.co.uk/downloads.html" target="_top">http://www.databasedev.co.uk/downloads.html<em class="citetitle"></em></a>),
+    possui diversos exemplos de bancos de dados.</p>
+  </div>
+
+  <div class="section" lang="pt"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e170"></a>6. Sobre o autor</h2></div></div></div>
+    
+
+    <p>Gilberto Jr. est&aacute; Auditor Fiscal do Estado de Rond&ocirc;nia, lotado em
+    Ji-Paran&aacute; RO; &eacute; java-aficcionado e interessado em I<span class="emphasis"><em>nformation
+    Technology (IT)</em></span> aplicada.
+    <code class="email">&lt;<a class="email" href="mailto:giljr.2009@gmail.com">giljr.2009@gmail.com</a>&gt;</code></p>
+  </div>
+
+  <div class="glossary"><div class="titlepage"><div><div><h2 class="title"><a name="d4e175"></a>Gloss&aacute;rio</h2></div></div></div><div class="glossdiv"><dl><dt><a name="dbms"></a>Sistema de Gerenciamento de Banco de Dados <acronym class="acronym">DBMS -
+        Database Management System</acronym></dt><dd><p>conjunto de programas de computador que controla a
+          cria&ccedil;&atilde;o, manuten&ccedil;&atilde;o e o uso de banco da dados pelo
+          computador ou pela organiza&ccedil;&atilde;o e seus usu&aacute;rios; sistema de
+          pacote de software que ajuda no uso de uma cole&ccedil;&atilde;o de
+          informa&ccedil;&otilde;es e arquivos, conhecidos como banco de dados, e
+          permite que aplicativos acessem-nos facilmente.</p></dd><dt><a name="sql"></a>Structured Query Language
+        <acronym class="acronym">SQL</acronym></dt><dd><p>&eacute; uma linguagem para bancos de dados desenhada para
+          Sistemas de Gerenciamento Bancos de Dados Relacionais
+          (<span class="emphasis"><em>RDBMS - relational database management
+          system</em></span>), e originalmente baseada em <span class="emphasis"><em>Algebra
+          Relacional</em></span>. Seus objetivos incluem consultas de
+          informa&ccedil;&otilde;es (data query), atualiza&ccedil;&atilde;o (update),
+          cria&ccedil;&atilde;o de schema, modifica&ccedil;&otilde;es (delete) e acesso a
+          dados (select); SQL foi influenciada pelo trabalho <a class="ulink" href="http://portal.acm.org/citation.cfm?doid=362384.362685" target="_top">
+              <span class="emphasis"><em>A Relational Model of Data for Large Shared Data
+              Banks</em></span>
+            </a>, de Edgar F. Codd, e se tornou a mais usada linguagem
+          para bancos de dados relacionais.</p></dd></dl></div></div>
+</div></body></html>
