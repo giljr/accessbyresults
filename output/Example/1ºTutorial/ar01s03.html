@@ -1,0 +1,171 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>3. Estruturando um Banco de Dados</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.74.0"><link rel="home" href="index.html" title="Access por Resultados - 1&ordm; Tutorial - Boas vindas ao MS Access"><link rel="up" href="index.html" title="Access por Resultados - 1&ordm; Tutorial - Boas vindas ao MS Access"><link rel="prev" href="ar01s02.html" title="2. Sistema de Gerenciamento de Bancos de Dados - SGBD"><link rel="next" href="ar01s04.html" title="4. Conclus&atilde;o"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3. Estruturando um Banco de Dados</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s02.html">Anterior</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s04.html">Pr&oacute;ximo</a></td></tr></table><hr></div><div class="section" lang="pt"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e59"></a>3. Estruturando um Banco de Dados</h2></div></div></div>
+    
+
+    <p>Aqui est&atilde;o as etapas utilizadas no processo de
+    estrutura&ccedil;&atilde;o de um banco de dados.</p>
+
+    <p>Cada etapa ser&aacute; discutida em maiores detalhes nos trabalhos
+    remanescentes dessa s&eacute;rie.</p>
+
+    <div class="itemizedlist"><ul type="disc"><li>
+        <p>Etapa 1 - <span class="emphasis"><em>determine o prop&oacute;sito do seu banco de
+        dados</em></span> - isso ajuda a decidir quais dados ser&atilde;o
+        armazenados pelo Ms Access.</p>
+      </li><li>
+        <p>Etapa 2 - <span class="emphasis"><em>determine as tabelas que voc&ecirc;
+        precisa</em></span> - ap&oacute;s decidir o prop&oacute;sito, divida as
+        informa&ccedil;&otilde;es em assuntos diferentes (contextos diversos); cada
+        assunto ir&aacute; compor uma tabela do seu banco de dados.</p>
+      </li><li>
+        <p>Etapa 3 - <span class="emphasis"><em>determine os campos necess&aacute;rios</em></span> -
+        cada categoria de informa&ccedil;&atilde;o &eacute; chamada de campo e &eacute; mostrada
+        como uma coluna independente na tabela.</p>
+      </li><li>
+        <p>Etapa 4 - <span class="emphasis"><em>determine os relacionamentos</em></span> -
+        decida como os dados de uma tabela se relacionam com os dados de
+        outras tabelas.</p>
+      </li><li>
+        <p>Etapa 5 - <span class="emphasis"><em>refine a estrutura do banco de
+        dados</em></span> - verifique inicialmente se consegue obter os
+        resultados desejados em suas tabelas. Caso necess&aacute;rio, reajuste a
+        estrutura de seu banco de dados.</p>
+      </li></ul></div>
+
+    <div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d4e79"></a>3.1. Etapa 1 - Determine o prop&oacute;sito de seu banco de dados</h3></div></div></div>
+      
+
+      <p>O primeiro passo na cria&ccedil;&atilde;o de um banco de dados &eacute; a
+      determina&ccedil;&atilde;o do objetivo do banco de dados e de como ser&aacute;
+      utilizado. Isso indicar&aacute; o tipo de informa&ccedil;&atilde;o a ser obtida. A
+      partir da&iacute;, pode-se determinar os assuntos (tabelas) a serem
+      introduzidos no banco de dados e quais os dados (campos) a serem
+      armazenados, para cada assunto.</p>
+
+      <p>Nosso objetivo: Gerar o "Termo de Leitura e C&oacute;pia de Dados
+      Gravados em ECF", conforme figura abaixo.</p>
+
+      <div class="figure"><a name="d4e83"></a><p class="title"><b>Figura 1. Termo de Leitura e C&oacute;pia de Dados Gravados em ECF</b></p><div class="figure-contents">
+        
+
+        <div class="screenshot">
+          
+
+          <div class="mediaobject"><img src="Termo.png" alt="Termo de Leitura e C&oacute;pia de Dados Gravados em ECF"></div>
+        </div>
+      </div></div><br class="figure-break">
+    </div>
+
+    <div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d4e90"></a>3.2. Etapa 2 - Determine as tabelas que voce precisa</h3></div></div></div>
+      
+
+      <p>Consulte o formul&aacute;rio anterior.</p>
+
+      <p>O pr&oacute;prio formul&aacute;rio nos d&aacute; dicas de tabelas candidatas; perceba
+      as divis&otilde;es internas no formul&aacute;rio.</p>
+
+      <p>Tr&ecirc;s se&ccedil;&otilde;es distintas se apresentam: Dados do
+      Estabelecimento, Dados da Ecf e Autentica&ccedil;&atilde;o de Arquivos.</p>
+
+      <p>Tr&ecirc;s tabelas podemos ent&atilde;o formar: Contribuinte, Ecf
+      e ArquivoAutenticado.</p>
+
+      <p>S&atilde;o assuntos (contextos) diferentes, merecedores de tabelas
+      separadas.</p>
+    </div>
+
+    <div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d4e97"></a>3.3. Etapa 3 - Determine os campos necess&aacute;rios</h3></div></div></div>
+      
+
+      <p>Transcrevendo os dados do formul&aacute;rio, ter&iacute;amos os campos:
+      Raz&atilde;o Social, Inscri&ccedil;&atilde;o Estadual, Cnpj e Endere&ccedil;o para
+      tabela Contribuintes;</p>
+
+      <p>Os campos Marca, Modelo, Vers&atilde;o Software B&aacute;sico e n&uacute;mero de
+      Fabrica&ccedil;&atilde;o para a tabela Ecf;</p>
+
+      <p>E finalmente, os campos Nome do Arquivo Autenticado, sua chave MD5
+      e SHA1, repetidos quatro vezes, para a tabela ArquivoAutenticado (no
+      m&aacute;ximo, por termo, s&oacute; podemos autenticar quatro arquivos).</p>
+    </div>
+
+    <div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d4e102"></a>3.4. Etapa 4 - Determine o relacionamento</h3></div></div></div>
+      
+
+      <p>O SGBD usa o relacionamento entre as tabelas para encontrar a
+      informa&ccedil;&atilde;o solicitada.</p>
+
+      <p>Voc&ecirc; define o relacionamento entre as tabelas.</p>
+
+      <p>No nosso exemplo analisemos a rela&ccedil;&atilde;o entre as tabelas
+      <span class="database">Contribuinte</span> X <span class="database">Ecf</span>:</p>
+
+      <p>Cada <span class="database">Contribuinte</span> possui nenhuma, uma ou
+      v&aacute;rias <span class="database">Ecf</span> (Rela&ccedil;&atilde;o zero ou
+      <em class="glossterm">Rela&ccedil;&atilde;o um-para-v&aacute;rias</em>); Cada
+      <span class="database">Ecf</span> pertence, num determinado tempo, a apenas um
+      <span class="database">Contribuinte</span> (<em class="glossterm">Rela&ccedil;&atilde;o
+      um-para-um</em> implementada pela inser&ccedil;&atilde;o do campo
+      CodigoContribuinte na tabela Ecf);</p>
+
+      <p>Quanto &agrave; rela&ccedil;&atilde;o <span class="database">Contribuinte</span> X
+      <span class="database">ArquivoAutenticado</span> X <span class="database">Ecf</span>: cada
+      arquivo autenticado refere-se apenas a um Contribuinte e a uma Ecf
+      (implementa&ccedil;&atilde;o feita pela inser&ccedil;&atilde;o dos campos
+      <span class="database">codigoContribuinte</span> e <span class="database">CodigoEcf</span>
+      na tabela <span class="database">ArquivoAutenticado</span>); por&eacute;m, cada
+      Contribuinte e cada Ecf podem ter mais de um arquivo autenticado - a
+      rela&ccedil;&atilde;o <span class="database">Contribuinte</span> X
+      <span class="database">ArquivoAutenticado</span> e <span class="database">Ecf</span> X
+      <span class="database">ArquivoAutenticado</span> &eacute; do tipo um-para-v&aacute;rias.
+      Perceba os s&iacute;mbolos de infinito (&#8734;) e 1, identificando as
+      rela&ccedil;&otilde;es: 1 Contribuinte pode ter v&aacute;rios/infinitos (&#8734;)
+      ArquivoAutenticado(s); cada ArquivoAutenticado concerne a apenas 1
+      Ecf...</p>
+
+      <p>Pronto, decidido as rela&ccedil;&otilde;es entre as tabelas, vamos
+      concretiz&aacute;-las:</p>
+
+      <div class="figure"><a name="d4e128"></a><p class="title"><b>Figura 2. Relacionamento entre as tabelas</b></p><div class="figure-contents">
+        
+
+        <div class="screenshot">
+          
+
+          <div class="mediaobject"><img src="gre_00.jpg" alt="Relacionamento entre as tabelas"></div>
+        </div>
+      </div></div><br class="figure-break">
+    </div>
+
+    <div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d4e135"></a>3.5. Etapa 5 - Refine a estrutura do banco de dados</h3></div></div></div>
+      
+
+      <p>Nessa fase acrescemos alguns campos que achamos
+      pertinentes.</p>
+
+      <p>Para a tabela <span class="database">Contribuinte</span>, acrescemos
+      Munic&iacute;pio, Unidade da Federa&ccedil;&atilde;o e Cep, por raz&otilde;es
+      &oacute;bvias.</p>
+
+      <p>Para a tabela <span class="database">Ecf</span>, acrescemos outros dados
+      constantes do arquivo extra&iacute;do do Sitafe, quais sejam: n&uacute;mero do Ato
+      Cotepe, n&uacute;mero do Pedido de Uso/Cessa&ccedil;&atilde;o, n&uacute;mero gerado pelo
+      Sitafe (do PAT), n&uacute;mero da vers&atilde;o atual e a encontrada pela
+      fiscaliza&ccedil;&atilde;o, campos necess&aacute;rios para trabalhos futuros.</p>
+
+      <p>O campo <span class="database">Atualizado</span> registra automaticamente a
+      data de cria&ccedil;&atilde;o do registro, para rastreabilidade; constitui-se
+      em <span class="emphasis"><em>boas pr&aacute;ticas na estrutura&ccedil;&atilde;o do banco de
+      dados</em></span>, assunto que retornarei em breve.</p>
+
+      <p>E finalmente a tabela <span class="database">ArquivoAutenticado</span>,
+      acrescemos os campos que a relaciona com as outras tabelas:
+      <span class="database">CodigoContribuinte</span> e <span class="database">CodigoEcf</span>
+      (ver figura 2), definindo o banco de dados como relacional.</p>
+
+      <p>Ent&atilde;o cada ArquivoAutenticado &eacute; marcado - &eacute; &uacute;nico -
+      mediante a adi&ccedil;&atilde;o de dois campos - as chaves pr&iacute;m&aacute;rias das outras
+      tabelas.</p>
+    </div>
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s02.html">Anterior</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s04.html">Pr&oacute;ximo</a></td></tr><tr><td width="40%" align="left" valign="top">2. Sistema de Gerenciamento de Bancos de Dados - SGBD&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">In&iacute;cio</a></td><td width="40%" align="right" valign="top">&nbsp;4. Conclus&atilde;o</td></tr></table></div></body></html>

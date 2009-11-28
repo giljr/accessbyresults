@@ -1,0 +1,86 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>2. Sistema de Gerenciamento de Bancos de Dados - SGBD</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.74.0"><link rel="home" href="index.html" title="Access por Resultados - 1&ordm; Tutorial - Boas vindas ao MS Access"><link rel="up" href="index.html" title="Access por Resultados - 1&ordm; Tutorial - Boas vindas ao MS Access"><link rel="prev" href="ar01s01.html" title="1. Introdu&ccedil;&atilde;o"><link rel="next" href="ar01s03.html" title="3. Estruturando um Banco de Dados"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2. Sistema de Gerenciamento de Bancos de Dados - SGBD</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s01.html">Anterior</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s03.html">Pr&oacute;ximo</a></td></tr></table><hr></div><div class="section" lang="pt"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e34"></a>2. Sistema de Gerenciamento de Bancos de Dados - SGBD</h2></div></div></div>
+    
+
+    <p>Um banco de dados &eacute; uma cole&ccedil;&atilde;o de dados. H&aacute; v&aacute;rias
+    estrat&eacute;gias para organiza&ccedil;&atilde;o das informa&ccedil;&otilde;es de modo a
+    facilitar o seu acesso e manipula&ccedil;&atilde;o.</p>
+
+    <p>Sistemas de Gerenciamento de Banco de Dados (<em class="glossterm">database
+    management system </em>- DBMS) fornecem mecanismos para
+    armazenamento, organiza&ccedil;&atilde;o, resgaste e modifica&ccedil;&atilde;o de dados
+    pelos usu&aacute;rios; o acesso aos dados pelos usu&aacute;rios pode ser simult&acirc;neo e
+    m&uacute;ltiplo.</p>
+
+    <p>Banco de dados relacionais s&atilde;o os mais usados atualmente.
+    Vamos entend&ecirc;-los e descobrir o porqu&ecirc; s&atilde;o a &uacute;ltima
+    palavra em termos de banco de dados.</p>
+
+    <p>V&aacute;rias empresas lan&ccedil;aram suas implementa&ccedil;&otilde;es de SGBD;
+    produtos tais como Microsoft SQL Server, Oracle, MySQL, Infomix,
+    PostgreSQL, Java DB (vers&atilde;o da Sun do Apache Derby ), Firebird
+    s&atilde;o largamente utilizados pelos programadores.</p>
+
+    <p>Cada um desses produtos oferecem <em class="glossterm">driver</em>,
+    interface necess&aacute;rias para nos comunicarmos com o banco de dados
+    espec&iacute;fico.</p>
+
+    <p>Esses driver normalmente s&atilde;o forrnecidos para uma linguagem
+    espec&iacute;fica: java, Cobol, Cliper, Piton, etc.</p>
+
+    <p>De posse desse driver pode o programador acessar os dados
+    armazenados no banco de dados independente de sua representa&ccedil;&atilde;o
+    interna.</p>
+
+    <p>Independente de sua representa&ccedil;&atilde;o interna ? o que isso
+    significa nesse contexto.</p>
+
+    <p>Imagine que estamos armazenando dados em uma planilha do MS Excel,
+    por exemplo; temos duas alternativas: ou acessamos os dados via o pr&oacute;prio
+    programa MS Excel, ou teremos que descobrir a representa&ccedil;&atilde;o interna
+    dos dados em uma planilha eletr&ocirc;nica para manipula-los, algo dif&iacute;cil e
+    penoso para programar: uma odiss&eacute;ia! se precisamos usar os dados num
+    editor de texto, precisamos saber sobre compatibilidades de arquivos...um
+    emaranhado se apresenta, e o problema &eacute; inicial e sem fim...</p>
+
+    <p>Acontece ainda que o MS Excel &eacute; uma planilha eletr&ocirc;nica e n&atilde;o
+    um banco de dados...</p>
+
+    <p>A melhor solu&ccedil;&atilde;o, se quisermos organizar informa&ccedil;&otilde;es
+    sistematicamente para reutiliz&aacute;-las em diversas tarefas, &eacute; usar um SGBD,
+    que &eacute; a pr&oacute;pria ess&ecirc;ncia do instrumento: gerenciar bancos de
+    dados.</p>
+
+    <p>O MS Access &eacute; uma implementa&ccedil;&atilde;o de um SGBD da
+    <span class="trademark">Microsoft</span>&#8482;.</p>
+
+    <p>Existe uma linguagem neutra, comum a todos os SGBD, que opera todas
+    as consultas que necessitamos para utilizarmos um banco de dados:
+    <em class="glossterm">SQL</em>.</p>
+
+    <p>SQL, <em class="glossterm">Standard Queries Language</em> &eacute; uma
+    linguagem universal de procedimentos de consultas em bancos de dados
+    relacionais.</p>
+
+    <p>Possui sintaxe simples, por&eacute;m poderosa; algo como <code class="code">SELECT *
+    FROM Contribuinte</code>, que se constitui em um camando SQL que seleciona
+    e retorna todos campos da tabela Contribuinte. Existem v&aacute;rios outros
+    comandos, tais com INSERT, UPDATE, DELETE, que interagem com o banco de
+    dados, independente de sua representa&ccedil;&atilde;o interna ou
+    implementa&ccedil;&atilde;o. Retornaremos ao assunto mais adiante, em outro
+    tutorial.</p>
+
+    <p>Atrav&eacute;s da SQL &eacute; que interagimos com o banco de dados
+    programaticamente, resgatando informa&ccedil;&otilde;es necess&aacute;rias aos
+    relat&oacute;rios, planilhas, e similares, que precisamos, assumindo certos
+    crit&eacute;rios, para satisfazer os nossos requerimentos de consultas,
+    inser&ccedil;&otilde;es, etc.</p>
+
+    <p>O MS Access esconde do usu&aacute;rio comum as peculiaridades da linguagem
+    SQL, buscando uma abstra&ccedil;&atilde;o que facilita a intera&ccedil;&atilde;o desse
+    usu&aacute;rio com o banco de dados; por&eacute;m, em se ententendo a linguagem,
+    auferimos maior poder de consulta &agrave;s nossas rotinas. Em &uacute;ltima
+    an&aacute;lise, passaremos a ser considerados usu&aacute;rios mais avan&ccedil;ados. Portanto
+    investir no conhecimento da linguagem SQL &eacute; recomend&aacute;vel.</p>
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s01.html">Anterior</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s03.html">Pr&oacute;ximo</a></td></tr><tr><td width="40%" align="left" valign="top">1. Introdu&ccedil;&atilde;o&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">In&iacute;cio</a></td><td width="40%" align="right" valign="top">&nbsp;3. Estruturando um Banco de Dados</td></tr></table></div></body></html>
