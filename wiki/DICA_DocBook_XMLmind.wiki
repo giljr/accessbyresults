@@ -1,4 +1,4 @@
-Os tutoriais desse site foram criados com a ferramenta DocBook:
+Os tutoriais desse site foram criados com a ferramenta {{{DocBook}}}:
 http://docbook.org
 
 Usamos um editor XML especial:
