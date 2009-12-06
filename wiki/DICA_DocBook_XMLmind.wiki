@@ -7,9 +7,9 @@ Usamos um editor XML especial:
 http://xmlmind.com/xmleditor/screenshots/winvista.png
 
 
-Usando a especificação DocBook 
+Usando a especificação {{{DocBook}}} 
 você tem liberdade de geração dos arquivos em diversas extensões
-para distribuição: pdf, docx, rtf, html, etc.
+para distribuição: pdf, docx, rtf, html, etc, SEM TER QUE MODIFICAR A FONTE!!!
 
 Usamos os Programas XMLmind XML Editor e XMLmind XSL-FO Converter.
 
