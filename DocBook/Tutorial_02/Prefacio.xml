@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<article version="5.0" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <section>
+    <title>Prefácio</title>
+
+    <para>Recentemente, convidamos colegas de profiss&#227;o, de outra
+    regional, para monstrar-lhes uma soluç&#227;o implementada em MS
+    Access.</para>
+
+    <para>Especificamente, nós, Equipe Ecf de Ji-Paraná, havíamos encontrado o
+    protótipo do AINF multa principal.</para>
+
+    <para>A intenç&#227;o era transmitirmos os passo-a-passo necessários para
+    chegarmos a planilha demonstrativa de base de cálculo.</para>
+
+    <para>Frente a uma estonteante quantidade de arquivos e bytes, havíamos de
+    fazer uma mineraç&#227;o na base de dados para chegarmos a uma planilha
+    limpa, provavelmente implementando-a no MS Excel.</para>
+
+    <para>
+      <para>O MS Excel se monstrou tímido frente a arquivos acima de duzentos
+      megabytes.,,</para>
+
+      <para>As planilhas se tornaram inadministráveis, extensas e
+      desconexas...</para>
+
+      <para>Como reunir decentementes todas as informaç&#245;es?</para>
+    </para>
+
+    <para>Apostamos no MS Access!</para>
+
+    <para>A dificuldade de fazermos uma engenharia-reversa em nossa
+    soluç&#227;o ficou patente, desde ent&#227;o...</para>
+
+    <para>Alguns passos, &#224; época, obscuros, se tornaram difíceis de
+    explicar.</para>
+
+    <para>Descobrimos, literalmente, nossas implementaç&#245;es
+    incompletas.</para>
+
+    <para>O resultado foi nosso próprio aperfeiçoamento, e de lambujem, essa
+    compilaç&#227;o da experi&#234;ncia.</para>
+
+    <para>Essa série de tutoriais surgiu da idéia de produzirmos um material
+    que n&#227;o só serve de consulta a quem interessar possa, como também
+    serve-nos como um guia.</para>
+
+    <para>A idéia e bem essa: um mapa; e o convidamos a vir também caminhar
+    nesse terreno com a gente!</para>
+
+    <para>Aproveitaremos para apontar-lhe alguns atalhos e certas trilhas já
+    batidas, preliminarmente, nesse terreno meio que desconhecido.</para>
+  </section>
+
+  <title>AUDI&#202;NCIA</title>
+
+  <section>
+    <para>Apesar da origem da compilaç&#227;o ser uma operaç&#227;o
+    específica, achamos que o interesse é a chave da boa leitura...e de seu
+    aproveitamento.</para>
+
+    <para>Todo aquele que se interesse na ferramenta MS Access faz parte de
+    nosso público: auditores, técnicos, interessados na área fiscal.</para>
+
+    <para>A cada dia descubrimos novas aplicaç&#245;es do MS Access...</para>
+
+    <para>Recentemente, em auditoria, tinhamos em m&#227;os dois arquivos no
+    formato MS Excel de inventários 2006 e 2007 de determinda empresa.</para>
+
+    <para>Precisavamos saber quais os ítens que nos inventários se repetiam
+    (estavam numerados sequencialmente).</para>
+
+    <para>Pensamos em algumas fórmulas no MS Excel para as rotinas, tais como
+    procv(), proc(), se()...</para>
+
+    <para>Importamos os dados para o MS Access e fizemos o relacionamento: a
+    mágica ocorreu!</para>
+
+    <para>Um horizonte se abre...acredite!</para>
+  </section>
+
+  <title>Como usar o material</title>
+
+  <para>N&#227;o titubeie em abrir o seu laptop, ligá-lo e dar a partida para
+  o MS Access mostrar a interface, logo de primeira!</para>
+
+  <para>Coloque as folhas ao lado do teclado e m&#227;os &#224; obra!</para>
+
+  <para>Tente implementar tudo passo-a-passo, desde o início;</para>
+
+  <para>Se cometer erro, delete e volte ao link Banco de dados em
+  branco...</para>
+
+  <para>O desembaraço vem de sua própria experi&#234;ncia com as interfaces do
+  Windows e de sua teimosia!</para>
+
+  <para>N&#227;o há tutorial de qualidade frente alguém
+  desinteressado...</para>
+
+  <para>Se voc&#234; leu até essa linha, talvez possa dar-nos a oportunidade
+  de mostrar-lhe como o MS Access é interessante e, após entendidos os seus
+  objetos e conex&#245;es, fácil de usar!</para>
+
+  <title>Na Web</title>
+
+  <para>Para hospedagem do Projeto: Access Por Resultado, implementamos uma
+  página no endereço http://code.google.com/p//accessbyresults/.</para>
+
+  <para>Lá, voc&#234; interage com a gente!</para>
+
+  <para>DOWNLOADS - baixe os mais recentes arquivos do projeto;</para>
+
+  <para>WIKI - deixe mensagens, sugest&#245;es ...</para>
+
+  <para>ISSUE - (assuntos) - Forum de discus&#245;es...abra novos assuntos,
+  solicite novas implementaç&#245;es, tutoriais...</para>
+
+  <title>A Equipe ECF</title>
+
+  <para>Gilberto jr é java-aficcionado e interessado em Information Technplogy
+  (IT) aplicada &lt;giljr.2009@gmail.com&gt;;</para>
+
+  <para>Israel de Paula Lopes tem experi&#234;ncias em eletrônica; costuma
+  cascavear pela internet em busca de programas interessantes
+  &lt;email&gt;;</para>
+
+  <para>Ilze N. Sonsin Gouveia, egressa da área bancária, tem trabalho nas
+  veias; organizaç&#227;o é seu nome.&lt;email&gt;.</para>
+</article>

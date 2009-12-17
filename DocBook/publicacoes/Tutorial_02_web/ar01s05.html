@@ -1,0 +1,44 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>5. Planejamento de Formul&aacute;rio Proveniente de Tabela &Uacute;nica</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.74.0"><link rel="home" href="index.html" title="Estruturando o Banco de Dados"><link rel="up" href="index.html" title="Estruturando o Banco de Dados"><link rel="prev" href="ar01s04.html" title="4. Relacionamentos"><link rel="next" href="ar01s06.html" title="6. Implementa&ccedil;&atilde;o da Consulta &agrave; M&uacute;ltiplas Tabelas"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5. Planejamento de Formul&aacute;rio Proveniente de Tabela &Uacute;nica</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s04.html">Anterior</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s06.html">Pr&oacute;ximo</a></td></tr></table><hr></div><div class="section" lang="pt"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e428"></a>5. Planejamento de Formul&aacute;rio Proveniente de Tabela &Uacute;nica</h2></div></div></div><p>Ap&oacute;s implementarmos as tabelas e relacionamentos entre elas,
+    necessitamos estruturar um meio de proceder &agrave; entrada de dados
+    nelas.</p><p>A maneira mais eficiente de inserir dados &agrave;s tabelas &eacute; mediante
+    formul&aacute;rios.</p><p>Um formul&aacute;ro tem a fun&ccedil;&atilde;o similar a gabarito.</p><p>Apesar de haver a possibilidade de se abrir cada tabela e inserir
+    dados um-a-um, independentemente, essa n&atilde;o &eacute; a maneira ideal, visto
+    que as tabelas se inter-relacionam e &eacute; dif&iacute;cil manter aten&ccedil;&atilde;o no
+    momento da inser&ccedil;&atilde;o de dados, afim de n&atilde;o
+    <em class="wordasword">quebrarmos</em> o entrela&ccedil;amento entre as
+    tabelas.</p><p>Ocorre ainda que, procedendo ao adicionamento direto, via tabelas,
+    ficamos mais propensos a cometer erros, al&eacute;m de ser penosa a opera&ccedil;&atilde;o
+    abrir tabela / inserir dados.</p><p>Por exemplo, para inserimos a informa&ccedil;&atilde;o CodigoContribuinte na
+    tabela ArquivoAutenticado, haver&iacute;amos de nos lembrar do c&oacute;digo espec&iacute;fico
+    daquele contribuinte na tabela Contribuinte...</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Dica]" src="images/tip.gif"></td><th align="left">Dica</th></tr><tr><td align="left" valign="top"><p>O Leitor Java v0.1, &eacute; um programa com uma interface gr&aacute;fica capaz
+      de importar dados direto do Sitafe. veja se&ccedil;&atilde;o recursos, no
+      final.</p></td></tr></table></div><p>Melhor t&eacute;cnica &eacute; usar um formul&aacute;rio, que automatiza essas
+    opera&ccedil;&otilde;es de inser&ccedil;&otilde;es e facilita a corre&ccedil;&atilde;o do banco de
+    dados relacionais.</p><p>Vamos ao exemplo da montagem de um formul&aacute;rio proveniente de tabela
+    &uacute;nica.</p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Importante]" src="images/important.gif"></td><th align="left">Importante</th></tr><tr><td align="left" valign="top"><p>Quando se usa um formu&aacute;rio para inserir dados, tem-se que
+      conect&aacute;-lo &agrave;(s) tabela(s) que d&aacute; origem aos dados. Se todos os
+      dados estiverem em uma &uacute;nica tabela, deve-se basear o formul&aacute;rio naquela
+      tabela. Se os dados estiverem em mais de uma tabela, deve-se basear o
+      formul&aacute;rio em uma <span class="emphasis"><em>consulta</em></span>.</p></td></tr></table></div><p>Selecione a tabela Contribuinte, escolha
+    <span class="guimenuitem">Inserir</span> &gt;
+    <span class="guimenuitem">Formul&aacute;rio</span>, no menu principal, selecione
+    <span class="emphasis"><em>AutoFormul&aacute;rio: Colunar,</em></span> tecle OK; salve-o como
+    <span class="emphasis"><em>EntradaDadosContribuinte_Formulario</em></span>; veja figura
+    abaixo:</p><div class="figure"><a name="d0e473"></a><p class="title"><b>Figura 10. Forma&ccedil;&atilde;o de formul&aacute;rio direto da tabela Contribuinte</b></p><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/t_02_14.bmp" align="middle" alt="Forma&ccedil;&atilde;o de formul&aacute;rio direto da tabela Contribuinte"></div></div></div><br class="figure-break"><p>Repita a opera&ccedil;&atilde;o anterior para a tabela Ecf; Salve o
+    formul&aacute;rio como <span class="emphasis"><em>EntradaDadosEcf_Formulario</em></span>.</p><p>Voc&ecirc; agora possui dois formul&aacute;rios para entrada de dados para
+    as tabelas <span class="emphasis"><em>Contribuinte</em></span> e
+    <span class="emphasis"><em>Ecf</em></span>.</p><p>Continuando nossos estudos com os passos para preenchimento do Termo
+    de Autentica&ccedil;&atilde;o, necessitaremos basear a consulta em v&aacute;rias
+    tabelas.</p><p>A t&eacute;cnica anterior n&atilde;o funciona, pois agora s&atilde;o campos
+    espalhados em tr&ecirc;s tabelas.</p><p>A seguir faremos um esbo&ccedil;o da <span class="emphasis"><em>consulta interna</em></span>
+    &agrave;s tr&ecirc;s tabelas, <span class="emphasis"><em>Contribuintes</em></span>,
+    <span class="emphasis"><em>ArquivosAutenticado</em></span> e <span class="emphasis"><em>Ecf</em></span>,
+    buscando apenas os campos que nos interessa para preenchimento do
+    <span class="emphasis"><em>Termo de Autentica&ccedil;&atilde;o</em></span>, quais sejam:</p><p>Campos necess&aacute;rios da tabela <span class="emphasis"><em>Contribuinte</em></span> para
+    se preencher o Termo de autentica&ccedil;&atilde;o:</p><div class="itemizedlist"><ul type="disc"><li><p>Raz&atilde;o Social;</p></li><li><p>Inscri&ccedil;&atilde;o Estadual;</p></li><li><p>CNPJ;</p></li><li><p>Endere&ccedil;o;</p></li></ul></div><p>Campos necess&aacute;rios da tabela <span class="emphasis"><em>Ecf</em></span> para se
+    preencher o Termo de autentica&ccedil;&atilde;o:</p><div class="itemizedlist"><ul type="disc"><li><p>Marca;</p></li><li><p>Modelo</p></li><li><p>Vers&atilde;o do software B&aacute;sico;</p></li><li><p>N&ordm; de Fabrica&ccedil;&atilde;o.</p></li></ul></div><p>E finalmente, todos os campos s&atilde;o necess&aacute;rios, para
+    preenchimento do Termo de autentica&ccedil;&atilde;o, provenientes da tabela
+    <span class="emphasis"><em>ArquivoAutenticado</em></span>, sem exce&ccedil;&atilde;o:</p><div class="itemizedlist"><ul type="disc"><li><p>Nome do Arquivo 1 a 4;</p></li><li><p>MD5 1 a 4;</p></li><li><p>SHA1 1 a 4;</p></li></ul></div><p>Como essa consulta &eacute; feita sobre v&aacute;rias tabelas, mostraremos na
+    pr&oacute;xima se&ccedil;&atilde;o como implement&aacute;-la.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s04.html">Anterior</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s06.html">Pr&oacute;ximo</a></td></tr><tr><td width="40%" align="left" valign="top">4. Relacionamentos&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">In&iacute;cio</a></td><td width="40%" align="right" valign="top">&nbsp;6. Implementa&ccedil;&atilde;o da Consulta &agrave; M&uacute;ltiplas Tabelas</td></tr></table></div></body></html>

@@ -1,0 +1,1553 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<article revision="1" version="5.0" xml:lang="pt"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <title>Estruturando o Banco de Dados</title>
+
+    <subtitle>2&#186; Tutorial - Access Por Resultados</subtitle>
+
+    <author>
+      <personname><firstname>Gil</firstname><surname>Jr.</surname></personname>
+    </author>
+
+    <revhistory>
+      <revision>
+        <revnumber>2</revnumber>
+
+        <date>Data:10/12/2009</date>
+      </revision>
+
+      <revision>
+        <revnumber>1</revnumber>
+
+        <date>Data:04/12/2009</date>
+      </revision>
+    </revhistory>
+
+    <abstract>
+      <para>Abra o seu <emphasis>laptop</emphasis>, d&#234; partida ao Ms
+      Access e prepare-se !</para>
+
+      <para>Nas próximas páginas voc&#234; encontra os <emphasis>passo a
+      passo</emphasis> para montagem de seu banco de dados.</para>
+
+      <para>N&#227;o se assuste ! a maior parte desse material é composta de
+      images, que guiá-lo-á a impress&#227;o do <emphasis>Termo de
+      Autenticaç&#227;o</emphasis>.</para>
+
+      <para>Boa leitura !</para>
+    </abstract>
+  </info>
+
+  <section>
+    <title>Introduç&#227;o</title>
+
+    <para>R<emphasis>esultado</emphasis> é filosofia dessa série; nesse
+    tutorial partimos para a infra-estrutura do banco de dados - tabelas,
+    consultas, formulários para daí, finalmente, imprimirmos o relatório
+    <emphasis>Termo de Leitura e Cópia de Dados gravados em Ecf</emphasis>,
+    ilustrado abaixo:</para>
+
+    <figure>
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="images/t_02_00.bmp" />
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>M&#227;os &#224; obra!</para>
+  </section>
+
+  <section>
+    <title>Abertura do banco de dados</title>
+
+    <para>Inicialize o MS Access.</para>
+
+    <para>Após aberto, pressione o bot&#227;o novo <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="images/botao_criar_novo_bd.gif"></imagedata>
+        </imageobject>
+      </inlinemediaobject>;</para>
+
+    <para>Das opç&#245;es oferecidas no menu do lado direito, selecione
+    <guimenuitem>Banco de dados em branco...</guimenuitem></para>
+
+    <para>Para nome do arquivo digite
+    <emphasis>EquipamentosContribuintes</emphasis>, e pressione
+    <guibutton>criar</guibutton>.</para>
+  </section>
+
+  <section>
+    <title>Tabelas</title>
+
+    <section>
+      <title>Contribuinte</title>
+
+      <para>Para criar a tabela <emphasis>Contribuinte</emphasis>:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Na janela Banco de Dados, na aba <guimenu>Tabelas</guimenu>,
+          clique no assistente <guilabel>Criar tabela no modo Disign;
+          </guilabel></para>
+        </listitem>
+
+        <listitem>
+          <para>Preencha as linhas conforme figura abaixo, prestando especial
+          atenç&#227;o para a 2&#170; coluna: <guisubmenu>Tipo de
+          dados;</guisubmenu><important>
+              <para>Nomeie os campos <wordasword>ipsis litteris</wordasword>,
+              iniciando-os com letra maiúscula e sem sinais <link
+              linkend="diacritico">diacrítico</link>s.</para>
+            </important></para>
+        </listitem>
+
+        <listitem>
+          <para>Selecione a linha <guilabel>CodigoContribuinte</guilabel>,
+          clique em <guimenu><link linkend="chave_primaria">Chave
+          Primária</link></guimenu> <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/botao_chave_primaria.gif"></imagedata>
+              </imageobject>
+            </inlinemediaobject> no menu principal, escolha para
+          <guisubmenu>Tipo de dados</guisubmenu>: <guisubmenu>Numeraç&#227;o
+          Automática</guisubmenu>;<figure xml:id="Fig01_tab_contribuinte">
+              <title>Tabela Contribuinte</title>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata align="center" fileref="images/t_02_01.bmp"></imagedata>
+                </imageobject>
+              </mediaobject>
+            </figure></para>
+        </listitem>
+
+        <listitem>
+          <para>Salve a tabela como <emphasis>Contribuinte</emphasis>.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Ecf</title>
+
+      <para>Para criar a tabela <emphasis>Ecf</emphasis> proceda da mesma
+      forma que a seç&#227;o anterior.</para>
+
+      <para>Use a figura abaixo para guiá-lo na nomeaç&#227;o dos campos e
+      tipo:</para>
+
+      <para><figure xml:id="Fig02_tab_ecf">
+          <title>Tabela Ecf</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_02.bmp"></imagedata>
+            </imageobject>
+          </mediaobject>
+        </figure></para>
+
+      <para>Observe o campo em destaque na figura acima: Atualizado.</para>
+
+      <para>Como boa <emphasis>prática de estruturaç&#227;o de bancos de
+      dados</emphasis>, incluímos, tanto na tabela
+      <emphasis>Contribuinte</emphasis>, quanto na <emphasis>Ecf</emphasis>, o
+      campo <guimenuitem>Atualizado</guimenuitem>, que será automaticamente
+      preenchido no momento da inserç&#227;o do registro no banco de
+      dados.</para>
+
+      <para>Tal campo serve para fins de rastreabilidade.</para>
+
+      <para>O processo para configuraç&#227;o do campo está monstrado na
+      figura acima, seguindo os passos:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>com a linha nome do campo
+          <guimenuitem>Atualizado</guimenuitem> selecionado, clique no
+          bot&#227;o retic&#234;ncia <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/botao_reticencia.gif"></imagedata>
+              </imageobject>
+            </inlinemediaobject> em <guimenuitem>Propriedades do campo :
+          </guimenuitem> <guimenuitem>Valor padr&#227;o</guimenuitem>;</para>
+        </listitem>
+
+        <listitem>
+          <para>no <emphasis>Construtor de express&#245;es</emphasis>, escolha
+          <guimenuitem>Funç&#245;es</guimenuitem> &gt;
+          <guimenuitem>Funç&#245;es internas </guimenuitem> &gt;
+          <guimenuitem>Data/Hora </guimenuitem> &gt; <guimenuitem>Data
+          </guimenuitem>e clique <guibutton>OK</guibutton>.</para>
+
+          <tip>
+            <para>Se quiser, digite a fórmula <emphasis>Data()
+            </emphasis>diretamente na Propriedade do campo <guimenuitem>Valor
+            padr&#227;o</guimenuitem>.</para>
+          </tip>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>ArquivoAutenticado</title>
+
+      <para>A próxima tabela, que armazena as chaves MD5 e SHA1 de cada
+      arquivo autenticado (cada termo possui no máximo 4 espaços para arquivos
+      autenticados), voc&#234; cria com o auxílio das informaç&#245;es
+      providas na figura abaixo:<figure>
+          <title>Tabela ArquivoAutenticado</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_03.bmp"></imagedata>
+            </imageobject>
+          </mediaobject>
+        </figure></para>
+
+      <para>Repita as operaç&#245;es anteriores.</para>
+
+      <para>Antes de salvar selecione os campos
+      <guimenuitem>CodigoContribuinte</guimenuitem> e
+      <guimenuitem>CodigoEcf</guimenuitem> e pressione <guibutton>chave
+      prímária</guibutton> <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="images/botao_chave_primaria.gif"></imagedata>
+          </imageobject>
+        </inlinemediaobject> no menu principal.</para>
+
+      <para>Salve a tabela como
+      <emphasis>ArquivoAutenticado</emphasis>.</para>
+
+      <para>Perceba que a tabela n&#227;o possui um campo de
+      auto-numeraç&#227;o automática, como as anteriores, visto que
+      implementamos a chave primária mediante a eleiç&#227;o de dois campos:
+      <guimenuitem>CodigoContribuinte</guimenuitem> e
+      <guimenuitem>CodigoEcf</guimenuitem>; esses, em conjunto, formam a <link
+      linkend="chave_multipla"> chave primária de múltiplos campos </link> que
+      fazem as vezes da chave primária auto-numerada, prestando ao mesmo tempo
+      para relacionar a tabela ArquivoAutenticado com as outras
+      tabelas.</para>
+
+      <para>As duas chaves, em conjunto, garantem a identificaç&#227;o do
+      registro como único, uma vez que singulariza o equipamento de um
+      contribuinte certo;</para>
+
+      <para>Um efeito colateral é que, ao configurarmos dessa maneira a tabela
+      <emphasis>ArquivoAutenticado</emphasis>, só poderemos entrar uma
+      autenticaç&#227;o para cada combinaç&#227;o de códigos de contribuinte e
+      ecf; teremos a certeza que n&#227;o haverá registros id&#234;nticos
+      quando as duas chaves identificar o equipamento daquele
+      contribuinte.</para>
+
+      <important>
+        <para>Deverá haver compatibilidade entre as <link
+        linkend="chave_primaria">chaves primária</link> e <link
+        linkend="chave_externa">externa</link>; na tabela ArquivoAutenticado,
+        os campos CodigoContribuinte e CodigoEcf (também chaves externas)
+        s&#227;o do Tipo de dados número inteiro longo e s&#227;o compatíveis
+        com o tipo de dados das respectivas chaves primárias, que possuem
+        Numeraç&#227;o Automática (nas respectivas tabelas primárias).</para>
+      </important>
+    </section>
+  </section>
+
+  <section>
+    <title>Relacionamentos</title>
+
+    <para>Relacionamento é assunto já abordado no 1&#186; Tutorial, vamos aqui
+    nos concentrar em como implementar os relacionamentos no MS Access.</para>
+
+    <para>No menu principal, selecione <guimenu>Ferramentas</guimenu> &gt;
+    <guisubmenu>Relacionamentos</guisubmenu>...</para>
+
+    <para>Ao abrir, o MS Access oferece a oportunidade de voc&#234; dizer
+    quais tabelas quer relacionar; se a mensagem n&#227;o aparece, clique no
+    bot&#227;o <emphasis>mostrar tabela</emphasis> <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="images/botao_mostrar_tabela.gif"></imagedata>
+        </imageobject>
+      </inlinemediaobject> e adicione as tr&#234;s tabelas:
+    <emphasis>Contribuintes</emphasis>, <emphasis>Ecf</emphasis> e
+    <emphasis>ArquivoAutenticado</emphasis>.</para>
+
+    <tip>
+      <para>Mantenha SHIFT pressionado enquanto seleciona as tabelas; depois
+      pressione <guibutton>Adicionar</guibutton>.</para>
+    </tip>
+
+    <para>Distribua as tabelas de acordo com a figura abaixo:<figure>
+        <title>Relacionamento entre as tabelas</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata align="center" fileref="images/t_02_04.bmp"></imagedata>
+          </imageobject>
+        </mediaobject>
+      </figure><tip>
+        <para>Para arrastar as tabelas, posicione o cursor no cabeçalho de
+        cada tabela e com o bot&#227;o direito do mouse pressionado, arraste
+        todo o conjunto; observamos que essa ditribuiç&#227;o é meramente
+        estética.</para>
+      </tip></para>
+
+    <para>Selecione o campo <guimenuitem>CodigoContribuinte</guimenuitem> da
+    tabela <emphasis>Contribuinte</emphasis> e arraste-o até o campo de mesmo
+    nome da tabela <emphasis>ArquivoAutenticado</emphasis>; libere o
+    <emphasis>mouse</emphasis>.</para>
+
+    <para>Selecione o campo <guimenuitem>CodigoEcf</guimenuitem> da tabela
+    <emphasis>Ecf</emphasis> e arraste-o até o campo de mesmo nome da tabela
+    <emphasis>ArquivoAutenticado</emphasis>; libere o
+    <emphasis>mouse</emphasis>.</para>
+
+    <tip>
+      <para>A movimentaç&#227;o deve ser feita sempre da tabela primária para
+      a tabela relacionada.</para>
+    </tip>
+
+    <para>Agora vamos impor a <link
+    linkend="integridade_referencial">integridade referencial</link> :</para>
+
+    <para>Selecione a linha do relacionamento Contribuinte X
+    ArquivoAutenticado, e clique com o bot&#227;o direito do mouse, para
+    editá-lo, conforme abaixo ilustrado:</para>
+
+    <figure>
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="images/t_02_39.bmp" />
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Selecione Impor integridade referencial, Propagar atualizaç&#245;es
+    dos campos relacionados e Propagar exclus&#227;o dos registros
+    relacionados, conforme abaixo:</para>
+
+    <figure>
+      <title>Imposiç&#227;o da Integridade Referencial na relaç&#227;o
+      Contribuinte X ArquivoAutenticado</title>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="images/t_02_05.bmp"></imagedata>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para></para>
+
+    <para>Proceda da mesma forma na relaç&#227;o entre as tabelas
+    <emphasis>ArquivoAutenticado</emphasis> X <emphasis>Ecf</emphasis>,
+    impondo a i<emphasis>ntegridade referencial e propagaç&#245;es das
+    atualizaç&#245;es e exclus&#245;es,</emphasis> conforme figura
+    abaixo:<figure>
+        <title>Imposiç&#227;o da Integridade referencial na relaç&#227;o Ecf X
+        ArquivoAutenticado</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata align="center" fileref="images/t_02_07.bmp"></imagedata>
+          </imageobject>
+        </mediaobject>
+      </figure></para>
+
+    <para>Salve <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="images/botao_salvar.gif"></imagedata>
+        </imageobject>
+      </inlinemediaobject> e feche a janela
+    <guimenuitem>Relacionamentos</guimenuitem>.</para>
+
+    <para>(Quanto ao termo <link linkend="fig_integridade">Integridade
+    referencial</link>, confira no glossário e o quadro logo abaixo)</para>
+
+    <figure>
+      <title>Explicaç&#227;o do significado da imposiç&#227;o da integridade
+      referencial</title>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="images/t_02_06.bmp"
+                     xml:id="fig_integridade"></imagedata>
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </section>
+
+  <section>
+    <title>Planejamento de Formulário Proveniente de Tabela Única</title>
+
+    <para>Após implementarmos as tabelas e relacionamentos entre elas,
+    necessitamos estruturar um meio de proceder &#224; entrada de dados
+    nelas.</para>
+
+    <para>A maneira mais eficiente de inserir dados &#224;s tabelas é mediante
+    formulários.</para>
+
+    <para>Um formuláro tem a funç&#227;o similar a gabarito.</para>
+
+    <para>Apesar de haver a possibilidade de se abrir cada tabela e inserir
+    dados um-a-um, independentemente, essa n&#227;o é a maneira ideal, visto
+    que as tabelas se inter-relacionam e é difícil manter atenç&#227;o no
+    momento da inserç&#227;o de dados, afim de n&#227;o
+    <wordasword>quebrarmos</wordasword> o entrelaçamento entre as
+    tabelas.</para>
+
+    <para>Ocorre ainda que, procedendo ao adicionamento direto, via tabelas,
+    ficamos mais propensos a cometer erros, além de ser penosa a operaç&#227;o
+    abrir tabela / inserir dados.</para>
+
+    <para>Por exemplo, para inserimos a informaç&#227;o CodigoContribuinte na
+    tabela ArquivoAutenticado, haveríamos de nos lembrar do código específico
+    daquele contribuinte na tabela Contribuinte...</para>
+
+    <tip>
+      <para>O Leitor Java v0.1, é um programa com uma interface gráfica capaz
+      de importar dados direto do Sitafe. veja seç&#227;o recursos, no
+      final.</para>
+    </tip>
+
+    <para>Melhor técnica é usar um formulário, que automatiza essas
+    operaç&#245;es de inserç&#245;es e facilita a correç&#227;o do banco de
+    dados relacionais.</para>
+
+    <para>Vamos ao exemplo da montagem de um formulário proveniente de tabela
+    única.</para>
+
+    <important>
+      <para>Quando se usa um formuário para inserir dados, tem-se que
+      conectá-lo &#224;(s) tabela(s) que dá origem aos dados. Se todos os
+      dados estiverem em uma única tabela, deve-se basear o formulário naquela
+      tabela. Se os dados estiverem em mais de uma tabela, deve-se basear o
+      formulário em uma <emphasis>consulta</emphasis>.</para>
+    </important>
+
+    <para>Selecione a tabela Contribuinte, escolha
+    <guimenuitem>Inserir</guimenuitem> &gt;
+    <guimenuitem>Formulário</guimenuitem>, no menu principal, selecione
+    <emphasis>AutoFormulário: Colunar,</emphasis> tecle OK; salve-o como
+    <emphasis>EntradaDadosContribuinte_Formulario</emphasis>; veja figura
+    abaixo:</para>
+
+    <figure>
+      <title>Formaç&#227;o de formulário direto da tabela Contribuinte</title>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="images/t_02_14.bmp"></imagedata>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Repita a operaç&#227;o anterior para a tabela Ecf; Salve o
+    formulário como <emphasis>EntradaDadosEcf_Formulario</emphasis>.</para>
+
+    <para>Voc&#234; agora possui dois formulários para entrada de dados para
+    as tabelas <emphasis>Contribuinte</emphasis> e
+    <emphasis>Ecf</emphasis>.</para>
+
+    <para>Continuando nossos estudos com os passos para preenchimento do Termo
+    de Autenticaç&#227;o, necessitaremos basear a consulta em várias
+    tabelas.</para>
+
+    <para>A técnica anterior n&#227;o funciona, pois agora s&#227;o campos
+    espalhados em tr&#234;s tabelas.</para>
+
+    <para>A seguir faremos um esboço da <emphasis>consulta interna</emphasis>
+    &#224;s tr&#234;s tabelas, <emphasis>Contribuintes</emphasis>,
+    <emphasis>ArquivosAutenticado</emphasis> e <emphasis>Ecf</emphasis>,
+    buscando apenas os campos que nos interessa para preenchimento do
+    <emphasis>Termo de Autenticaç&#227;o</emphasis>, quais sejam:</para>
+
+    <para>Campos necessários da tabela <emphasis>Contribuinte</emphasis> para
+    se preencher o Termo de autenticaç&#227;o:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Raz&#227;o Social;</para>
+      </listitem>
+
+      <listitem>
+        <para>Inscriç&#227;o Estadual;</para>
+      </listitem>
+
+      <listitem>
+        <para>CNPJ;</para>
+      </listitem>
+
+      <listitem>
+        <para>Endereço;</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Campos necessários da tabela <emphasis>Ecf</emphasis> para se
+    preencher o Termo de autenticaç&#227;o:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Marca;</para>
+      </listitem>
+
+      <listitem>
+        <para>Modelo</para>
+      </listitem>
+
+      <listitem>
+        <para>Vers&#227;o do software Básico;</para>
+      </listitem>
+
+      <listitem>
+        <para>N&#186; de Fabricaç&#227;o.</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>E finalmente, todos os campos s&#227;o necessários, para
+    preenchimento do Termo de autenticaç&#227;o, provenientes da tabela
+    <emphasis>ArquivoAutenticado</emphasis>, sem exceç&#227;o:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Nome do Arquivo 1 a 4;</para>
+      </listitem>
+
+      <listitem>
+        <para>MD5 1 a 4;</para>
+      </listitem>
+
+      <listitem>
+        <para>SHA1 1 a 4;</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Como essa consulta é feita sobre várias tabelas, mostraremos na
+    próxima seç&#227;o como implementá-la.</para>
+  </section>
+
+  <section>
+    <title>Implementaç&#227;o da Consulta &#224; Múltiplas Tabelas</title>
+
+    <para>Podemos pensar nas consultas como se fossem tabelas virtuais.</para>
+
+    <para>Depois de executar uma consulta, o MS Access coleta os dados
+    procurados em um <link linkend="dynaset">dynaset</link>.</para>
+
+    <para>Um <link linkend="dynaset">dynaset</link> se comporta como uma
+    tabela; é uma visualizaç&#227;o dinâmica dos dados de uma ou mais tabelas,
+    selecionados e classificados como especificado pela consulta; vamos a um
+    exemplo:</para>
+
+    <para>Para chegarmos ao nosso objetivo (imprimir o T<emphasis>ermo de
+    Autenticaç&#227;o</emphasis>), necessitamos fazer uma consulta &#224;s
+    tr&#234;s tabelas especificadas.</para>
+
+    <para>Vamos apresentar a técnica para se fazer uma consulta &#224;
+    múltiplas tabelas (usaremos essa consulta no relatório).</para>
+
+    <orderedlist>
+      <listitem>
+        <para>Na aba <guimenuitem>Consultas</guimenuitem>, vá ao menu
+        principal, clique no bot&#227;o novo <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_novo.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> e escolha <guimenuitem>Assistente de consulta
+        simples</guimenuitem>;<figure>
+            <mediaobject>
+              <imageobject>
+                <imagedata align="center" fileref="images/t_02_08.bmp" />
+              </imageobject>
+            </mediaobject>
+          </figure></para>
+      </listitem>
+
+      <listitem>
+        <para>Na caixa de opç&#245;es, selecione <guimenuitem>Tabela:
+        Contribuinte</guimenuitem>, transfira os campos
+        <guimenuitem>Rs</guimenuitem>, <guimenuitem>Ie</guimenuitem>,
+        <guimenuitem>Cnpj</guimenuitem>, <guimenuitem>End</guimenuitem>,
+        <guimenuitem>Municipio</guimenuitem> e <guimenuitem>Uf</guimenuitem>
+        para o espaço <guilabel>Campos selecionados</guilabel>; use o
+        bot&#227;o transfere-um-a-um <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_avanca_um.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> ; (mantenha-se na tela);<figure>
+            <mediaobject>
+              <imageobject>
+                <imagedata align="center" fileref="images/t_02_09.bmp" />
+              </imageobject>
+            </mediaobject>
+          </figure></para>
+      </listitem>
+
+      <listitem>
+        <para>Na mesma tela, selecione Tabela: <emphasis>Ecf</emphasis> e
+        insira os campos de <guimenuitem>Marca</guimenuitem>,
+        <guimenuitem>Modelo</guimenuitem>,
+        <guimenuitem>NrVersao</guimenuitem>,
+        <guimenuitem>NrFabricacao</guimenuitem>; (mantenha-se na tela);<figure>
+            <mediaobject>
+              <imageobject>
+                <imagedata align="center" fileref="images/t_02_10.bmp" />
+              </imageobject>
+            </mediaobject>
+          </figure></para>
+      </listitem>
+
+      <listitem>
+        <para>Ainda na mesma tela, selecione a tabela
+        <emphasis><emphasis>ArquivoAutenticado</emphasis></emphasis> e insira
+        <emphasis>todos os campos</emphasis> clicando no bot&#227;o
+        transfere-todos <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_avanca_todos.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> ; ( agora pressione <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_avancar.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> 2 X aceitando a configuaç&#227;o
+        padr&#227;o)<figure>
+            <mediaobject>
+              <imageobject>
+                <imagedata align="center" fileref="images/t_02_11.bmp" />
+              </imageobject>
+            </mediaobject>
+          </figure></para>
+      </listitem>
+
+      <listitem>
+        <para>Nomeie a consulta como
+        <guimenuitem>ArquivoAutenticadoPorContribuinte_Consulta</guimenuitem>
+        e clique no bot&#227;o concluir <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_concluir.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> ;<figure>
+            <mediaobject>
+              <imageobject>
+                <imagedata align="center" fileref="images/t_02_12.bmp" />
+              </imageobject>
+            </mediaobject>
+          </figure></para>
+
+        <tip>
+          <para>Ao nomear os objetos, costumamos acrescentar, no final do
+          nome, um identificador do tipo de objeto (para isso sufixamos o nome
+          do objeto com _TipoDoObjeto); por exemplo, se relatório, sufixo
+          _Relatorio, se consulta sufixo _Consulta...assim em diante; o motivo
+          voc&#234; perceberá no transcorrer desse trabalho.</para>
+        </tip>
+      </listitem>
+
+      <listitem>
+        <para>O MS Access abre a consulta, em <link
+        linkend="???">dynaset</link>, conforme figura abaixo (se n&#227;o
+        houver dado plotado, o dynaset aparece em branco, indicando nulo o
+        retorno); agora, feche a janela, clicando no bot&#227;o fechar
+        <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_fechar.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> ;</para>
+
+        <para><figure>
+            <mediaobject>
+              <imageobject>
+                <imagedata align="center" fileref="images/t_02_13.bmp" />
+              </imageobject>
+            </mediaobject>
+          </figure></para>
+      </listitem>
+
+      <listitem>
+        <para>Na aba consulta, selecione o objeto
+        <guimenuitem>ArquivoAutenticadoPorContribuinte_Consulta</guimenuitem>,
+        clique no botao estrutura <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_design.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> , conforme indicado na figura:</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_17.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+
+      <listitem>
+        <para>No modo Design (estrutura), na <link
+        linkend="grade_qbe"><emphasis>grade QBE</emphasis></link>, procure
+        pelo campo <guimenuitem>CodigoContribuinte</guimenuitem> e proceda
+        conforme indicado na figura abaixo, inserindo no campo <guimenu>
+        Critérios</guimenu> a express&#227;o : [Entre com o código do
+        contribuinte], dessa forma, entre colchetes;</para>
+
+        <para>Salve a consulta, clicando no bot&#227;o salvar
+        <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_salvar.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> , no menu principal, feche a janela clicando em
+        fechar <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_fechar.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject></para>
+
+        <para>Pronto! agora estamos prontos para seguirmos.</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_18.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+    </orderedlist>
+  </section>
+
+  <section>
+    <title>Implementaç&#227;o do Formulário para Confecç&#227;o do
+    Relatório</title>
+
+    <para>Implementaremos nova consulta para que seja usada para gerar o
+    formulário de entrada de dados de ecf por contribuintes.</para>
+
+    <para>Essa consulta usaremos especificamente para entrar dados do Termo de
+    Autenticaç&#227;o e demonstrar outra técnica para gerar
+    formulários.</para>
+
+    <para>Os passos para implementar o formulário, s&#227;o:</para>
+
+    <orderedlist>
+      <listitem>
+        <para>Na aba Formulários, clique no bot&#227;o novo <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_novo.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> ;</para>
+
+        <para>Selecione <guimenuitem>Assistente de formulário</guimenuitem> e
+        clique <guibutton>OK</guibutton>;</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_15.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+
+      <listitem>
+        <para>O MS Access pergunta que campos voc&#234; deseja no seu
+        formulário.</para>
+
+        <para>Com a <guisubmenu>Tabela: Contribuinte</guisubmenu> selecionada,
+        transfira os campos <guimenuitem>Rs</guimenuitem>.
+        <guimenuitem>Ie</guimenuitem>, <guimenuitem>Cnpj</guimenuitem>,
+        <guimenuitem>End</guimenuitem>, <guimenuitem>Municipio</guimenuitem> e
+        <guisubmenu>Uf</guisubmenu> para o espaço <emphasis><emphasis>Campos
+        selecionados</emphasis>,</emphasis> usando o bot&#227;o
+        transfere-um-a-um <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_avanca_um.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject>, (mantenha-se na tela);</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_19.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+
+      <listitem>
+        <para>Na mesma tela, selecione a tabela
+        <emphasis>ArquivoAutenticado</emphasis> e usando o bot&#227;o
+        transfere-todos <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_avanca_todos.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> passe todos os campos para o espaço
+        <guilabel>Campos selecionados</guilabel>, conforme indicado
+        abaixo;</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_22.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <para>Depois clique no bot&#227;o avançar <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_avancar.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> para a próxima tela do assistente.</para>
+      </listitem>
+
+      <listitem>
+        <para>O assistente questiona como voc&#234; deseja exibir os seus
+        dados; selecione <emphasis>por Contribuinte</emphasis> e escolha
+        <emphasis>Formulário com subformulário(s)</emphasis>;</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_23.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <para>Clique no bot&#227;o avançar <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_avancar.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> , para a próxima tela do assistente;</para>
+      </listitem>
+
+      <listitem>
+        <para>Escolha como <emphasis>layout</emphasis> do seu formulário
+        <emphasis>Folha de dados</emphasis>;</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_24.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <para>Clique no bot&#227;o avançar <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_avancar.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> .</para>
+      </listitem>
+
+      <listitem>
+        <para>Mantenha o estilo <emphasis>Padr&#227;o</emphasis> (ou escolha
+        outro) e clique no bot&#227;o avançar <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_avancar.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject></para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_25.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+
+      <listitem>
+        <para>Salve o Formulário:
+        <emphasis>EntradaDadosEcfPorContribuinte_Formulario</emphasis> e
+        Subformulário:
+        <emphasis>EntradaDadosEcfPorContribuinte_Subformulario</emphasis>;</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_26.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <para>Clique no bot&#227;o concluir <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_concluir.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> , para finalizar;</para>
+      </listitem>
+
+      <listitem>
+        <para>Pronto; o formulário e seu subformulário est&#227;o prontos para
+        receber dados;</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_27.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+
+      <listitem>
+        <para>Insira alguns dados para os exercícios seguintes.</para>
+
+        <para>Apresentamos quadros de exemplo para facilitar a inserç&#227;o
+        de dados:</para>
+
+        <table>
+          <title>Exemplo para a Tabela: Contribuinte</title>
+
+          <tgroup cols="6">
+            <tbody>
+              <row>
+                <entry>Rs (Codigo)</entry>
+
+                <entry>Ie</entry>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>Cnpj</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>End</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>Municipio</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>Uf</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+              </row>
+
+              <row>
+                <entry>DANIEL JOSE BREMENKAMP (01)</entry>
+
+                <entry>00000000121677</entry>
+
+                <entry>05930425000134</entry>
+
+                <entry>TEREZINA 1778</entry>
+
+                <entry>JI-PARANÁ</entry>
+
+                <entry>RO</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+
+        <table>
+          <title>Exemplo para a Tabela: Ecf</title>
+
+          <tgroup cols="11">
+            <tbody>
+              <row>
+                <entry>Marca</entry>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>Modelo</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>NrAto</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>NrPedido</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>NrFab.</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>NrGerado</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>NrVersao</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>NrVsEnc.</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>AtoCotepe</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>Atualizado</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+
+                <entrytbl cols="1">
+                  <tbody>
+                    <row>
+                      <entry>CodigoContribuinte</entry>
+                    </row>
+                  </tbody>
+                </entrytbl>
+              </row>
+
+              <row>
+                <entry>BEMATECH</entry>
+
+                <entry>MP-2100 TH FI</entry>
+
+                <entry>01.01.00</entry>
+
+                <entry>375/2001</entry>
+
+                <entry>BE9870</entry>
+
+                <entry>2007002</entry>
+
+                <entry>01.01.01</entry>
+
+                <entry>01.01.01</entry>
+
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry>1</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+
+        <table>
+          <title>Exemplo para a Tabela:ArquivoAutenticado</title>
+
+          <tgroup cols="2">
+            <tbody>
+              <row>
+                <entry>NomeArquivo_1</entry>
+
+                <entry>141882_20090901_093126.MFD</entry>
+              </row>
+
+              <row>
+                <entry>Md5_1</entry>
+
+                <entry>7dd8915bd242a8bd9305109f1fe3d78e</entry>
+              </row>
+
+              <row>
+                <entry>Sha_1</entry>
+
+                <entry>a22ed2b4e81a23fec2036db15e1371333d13209a</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+
+        <table>
+          <title>Continuaç&#227;o para a Tabela:Ecf</title>
+
+          <tgroup cols="2">
+            <tbody>
+              <row>
+                <entry>CodigoContribuinte</entry>
+
+                <entry>codigoEcf</entry>
+              </row>
+
+              <row>
+                <entry>01</entry>
+
+                <entry>01</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+
+        <para>Para os outros campos, NomeArquivo_n, Md5_n e Sha_n, preencha
+        com as letras N/D (N&#227;o Disponível) ou deixe-os em branco (estamos
+        em teste); em outro tutorial explicarei sobre o
+        <application>Autenticador Java v.0.4</application>, que insere esses
+        dados direto no banco de dados.</para>
+
+        <note>
+          <para>A importância da nomenclatura adotada aparece quando se tem
+          diversos objetos na área de trabalho e podermos interconectá-los
+          facilmente pelos nomes; <citation>Adote uma nomenclatura desde o
+          início do seu trabalho no MS Access: os benefícios s&#227;o sutis,
+          mas importantes</citation>.</para>
+        </note>
+
+        <annotation></annotation>
+
+        <annotation></annotation>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_28.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+    </orderedlist>
+  </section>
+
+  <section>
+    <title>Relatório</title>
+
+    <para>O último passo antes de chegarmos a impress&#227;o do Termo de
+    Autenticaç&#227;o é implementar o relatório.</para>
+
+    <para>Assumimos prontos os seguintes objetos, com dados nas tabelas já
+    plotados:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Tabela: Contribuinte</para>
+      </listitem>
+
+      <listitem>
+        <para>Tabela: Ecf</para>
+      </listitem>
+
+      <listitem>
+        <para>Tabela: ArquivoAutenticado</para>
+      </listitem>
+
+      <listitem>
+        <para>EntradaDadosContribuinte_Formulario</para>
+      </listitem>
+
+      <listitem>
+        <para>EntradaDadosEcf_Formulario</para>
+      </listitem>
+
+      <listitem>
+        <para>EntradaDadosEcfPorContribuinte_Formulario</para>
+      </listitem>
+
+      <listitem>
+        <para>EntradaDadosEcfPorContruinte_Subformulario</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Necessário também será o arquivo em formato MS Word, com o Termo de
+    Leitura.doc (Termo de Leitura e Cópia de Dados Gravados em Ecf) , conforme
+    ilustraç&#227;o:</para>
+
+    <figure>
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="images/t_02_29.bmp" />
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Abra-o no Ms Word;</para>
+
+    <para>No menu <guimenuitem>Editar &gt; Selecionar Tudo &gt;
+    Copiar</guimenuitem> e mantenha o objeto na <emphasis>área de
+    transfer&#234;ncia</emphasis>.</para>
+
+    <para>Vamos aos passos para implementar, no Ms Access, o relatório do
+    Termo de Autenticaç&#227;o:</para>
+
+    <orderedlist>
+      <listitem>
+        <para>Na aba Relatórios clique no bot&#227;o novo <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_novo.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> e , no <guimenuitem>Modo de
+        Design</guimenuitem>, escolha a consulta
+        <guimenuitem>ArquivoAutenticadoPorContribuinte_Consulta</guimenuitem>
+        e clique <guibutton>OK</guibutton>;</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_30.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <caution>
+          <para>Assumimos que há uma impressora configurada; se n&#227;o
+          houver, proceda antes com a configuraç&#227;o.</para>
+        </caution>
+      </listitem>
+
+      <listitem>
+        <para>O MS Access apresenta a estrutura do relatório, dividido em
+        tr&#234;s seç&#245;es e os campos disponíveis para inserir controles
+        nessa estrutura;</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_31.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+
+      <listitem>
+        <para>Arraste as divis&#245;es de modo a aparecer somente a parte
+        <emphasis>Detalhes</emphasis>, conforme ilustrado abaixo:</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_32.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+
+      <listitem>
+        <para>Clique dentro da secç&#227;o <emphasis>Detalhes</emphasis> e com
+        o arquivo<emphasis> Termo de Leitura.doc</emphasis> na área de
+        transfer&#234;ncia, cole-o nessa regi&#227;o (CRTL + V); confirme o
+        formato correto na figura imediata:</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_33.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <figure>
+          <title>Configuraç&#227;o do formato do relatório</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_41.bmp"></imagedata>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+
+      <listitem>
+        <para>Agora da janela Lista de Campos (caso a janela n&#227;o esteja
+        visível clique no bot&#227;o lista de campos <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_lista_de_campos.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> do menu principal para ativá-la), arraste os
+        controles e os posicione no local adequado - tenha paci&#234;ncia;
+        veja ilustraç&#227;o abaixo:</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_34.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+
+      <listitem>
+        <para>Quando o MS Access solicitar nome, salve o relatório como
+        TermoLeituraCopiaDadosGravadosEmEcf ;</para>
+
+        <para>Como configuraç&#227;o final, clique no bot&#227;o ferramentas
+        <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_ferramentas.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> no menu principal, para exibir a caixa de
+        ferramentas;</para>
+
+        <para>Pressione o bot&#227;o caixa de texto <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_caixa_texto.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject>;</para>
+
+        <para>Desenhe um retângulo abaixo da regi&#227;o do NÚMERO DO TERMO
+        (ver figura abaixo); seleciona a caixa de texto.</para>
+
+        <para>Pressione o bot&#227;o propriedades <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_propriedades.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> no menu principal e configure os campos
+        conforme figura seguinte:</para>
+
+        <figure>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" fileref="images/t_02_40.bmp" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <para>Pronto, o termo terá o seu número gerado automaticamente ;
+        terminamos e agora o Termo de Autenticaç&#227;o esta pronto para
+        impress&#227;o.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+
+  <section>
+    <title>Recursos</title>
+
+    <para>A próxima etapa será a apresentaç&#227;o de ferramentas de serviços
+    auxiliares para o preenchimento automático das tabelas
+    implementadas;</para>
+
+    <para>O <emphasis><application>Leitor Java v0.1</application></emphasis>
+    fornece uma interface gráfica capaz de ajudá-lo a importar
+    instantaneamente os arquivos do <emphasis>Sitafe</emphasis> contendo os
+    dados do contribuinte e equipamentos a ele pertencentes.</para>
+
+    <para>Para se ter uma idéia, apresentamos um arquivo texto extraído do
+    Sitafe, e que serve de fonte para o <emphasis><application>Leitor Java
+    v0.1</application></emphasis>:</para>
+
+    <figure>
+      <title>Arquivo texto importado do Sitafe, usado pelo programa Leitor
+      Java para inserir dados automaticamente</title>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="images/t_02_36.bmp"></imagedata>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>Outra ferramenta desenvolvida que facilitará as autenticaç&#245;es é
+    o <emphasis><application>Autenticador Java
+    v0.3</application></emphasis>.</para>
+
+    <para>O <emphasis><application>Autenticador Java
+    v.0.3</application></emphasis> , provido de interface gráfica, l&#234; os
+    arquivos a autenticar e os insere automatica e diretamente no banco de
+    dados .</para>
+
+    <para>Com essas ferramentas em ma&#245;s haverá sensível diminuiç&#227;o
+    de erros na inserç&#227;o dos dados no banco de dados e uma
+    semi-automaç&#227;o que dimunuirá o tempo necessário para se imprimir o
+    TERMO DE LEITURA E CÓPIA DE DADOS GRAVADOS EM ECF, reduzindo os riscos
+    inerentes &#224;s operaç&#245;es copiar / colar comuns nessas
+    tarefas.</para>
+
+    <para>Em outro tutorial aprofundaremos nesse assunto...</para>
+
+    <para>OBS: todos os arquivos desse trabalho est&#227;o disponíveis para
+    <emphasis>downlods</emphasis> no site
+    <uri>http://code.google.com/p/accessbyresults/</uri>, preparado
+    especialmente para abrigar o <emphasis>Projeto AccessByResults</emphasis>;
+    confira a página inicial do projeto na figura abaixo e aproveite para
+    interagir!</para>
+
+    <para>Aguarde o próximo tutorial. Até breve !</para>
+
+    <figure>
+      <title>Página inicial do <emphasis>Projeto: Access Por
+      Resultado</emphasis></title>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="images/t_02_37.bmp"></imagedata>
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </section>
+
+  <simplesect>
+    <para>Sobre o Autor</para>
+
+    <para>Gilberto Jr. está Auditor Fiscal do Estado de Rondônia, lotado em
+    Ji-Paraná RO; é java-aficcionado e interessado em Information Technology
+    (IT) aplicada. &lt;giljr.2009@gmail.com&gt;; Made with <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="images/doc.png" />
+        </imageobject>
+      </inlinemediaobject>.</para>
+  </simplesect>
+
+  <glossary>
+    <glossentry>
+      <glossterm>Diacrítico</glossterm>
+
+      <glossdef>
+        <para>É um sinal gráfico que se coloca sob, sobre ou através de uma
+        letra para alterar sua realizaç&#227;o fonética, isto é, seu som, ou
+        para marcar qualquer outra característica linguística; exemplos:
+        acentos em geral, til(~), trema("), cedilha(ç), etc.</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry xml:id="chave_primaria">
+      <glossterm>Chave primária</glossterm>
+
+      <glossdef>
+        <para>Consiste de um ou mais campos que identifica(m), exclusivamente,
+        cada registro armazenado na tabela. A chave primária constuma ser um
+        número ou código de identificaç&#227;o, uma vez que esse tipo de valor
+        é sempre diferente para cada registro. Por exemplo, na tabela
+        <emphasis>Ecf</emphasis>, cada equipamento emissor de cupom fiscal tem
+        um número único de identificaç&#227;o, campo NrFabricaç&#227;o; esse
+        campo é candidato a se tornar a chave primária daquela tabela; porém
+        n&#227;o o utilizamos como chave primária, pois que o número é longo,
+        difícil de digitar e de lembrar (por exemplo: BE050775610706002265).
+        Optamos por criar uma chave primária artificial, gerada pelo próprio
+        MS Access: <emphasis>Numeraç&#227;o Automática</emphasis>. Como regra
+        geral, usar a <emphasis>Numeraç&#227;o Automática</emphasis> é
+        <emphasis>boa prática de estruturaç&#227;o de banco de
+        dados</emphasis>.</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry xml:id="chave_externa">
+      <glossterm>Chave externa</glossterm>
+
+      <glossdef>
+        <para><emphasis>Chave estrageira (Foreign Key)</emphasis> tipicamente
+        provem da chave primária de outra tabela; serve para implementar
+        relacionamentos do tipo <emphasis>um-para-vários</emphasis> (mais
+        raramente relacionamento tipo <emphasis>um-para-um</emphasis>);
+        exemplo: a tabela <emphasis>ArquivoAutenticado</emphasis> possui duas
+        chaves externas (<guimenuitem>CodigoContribuinte</guimenuitem> e
+        <guimenuitem>CodigoEcf</guimenuitem>), que implementam as
+        relaç&#245;es entre as tabelas correspondentes e marca a chave
+        primária múltipla daquela tabela.</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry xml:id="chave_multipla">
+      <glossterm>Chave primária múltipla</glossterm>
+
+      <glossdef>
+        <para><emphasis>Chave primária de múltiplos campos</emphasis> é
+        apropriada quando a tabela n&#227;o contiver valores exclusívos; daí a
+        necessidade de se ter mais de um campo como chave primária. Exemplo: a
+        tabela <emphasis>ArquivoAutenticado</emphasis>, n&#227;o possui campos
+        exclusivos. Dessa forma, escolhemos as chaves externas,
+        <guimenuitem>CodigoContribuinte</guimenuitem> e
+        <guimenuitem>CodigoEcf</guimenuitem>, para juntas, funcionarem como
+        chaves primárias (selecionando os dois campos e clicando
+        <guimenuitem>Chave primária</guimenuitem> <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/botao_chave_primaria.gif"></imagedata>
+            </imageobject>
+          </inlinemediaobject> no menu principal); agora, cada registro é
+        individualizado e temos a vantagem de n&#227;o permitir que um mesmo
+        equipamento de um id&#234;ntico contribuinte tenha duas
+        autenticaç&#245;es iguais, vez que o MS Access garante que os valores
+        da chave primária sejam únicos.</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry xml:id="integridade_referencial">
+      <glossterm>Integridade Referencial</glossterm>
+
+      <glossdef>
+        <para>Ao impor a <emphasis>Integridade referencial</emphasis> o MS
+        Access ajuda a assegurar que o relacionamento entre registros sejam
+        válidos e que voc&#234; n&#227;o exclua acidentalmente dados
+        relacionados.</para>
+
+        <para>Quando a <emphasis>integridade referencial</emphasis> é imposta
+        voc&#234; precisa observar as seguintes regras: 1) Ao adicionar um
+        registro a uma tabela relacionada e especificar um valor no(s)
+        campo(s) correpondente(s), precisa haver pelo menos um registro com
+        esse valor na tabela primária e 2) n&#227;o se pode excluir um
+        registro de uma tabela primária se ainda existirem registros
+        coincidentes em uma tabela relacionada.</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry xml:id="dynaset">
+      <glossterm>Dynaset</glossterm>
+
+      <glossdef>
+        <para>É um tipo de registro atualizável; esses registros podem ser
+        definidos por uma tabela ou consulta a várias tabelas; é tratado como
+        um objeto no MS Access.</para>
+
+        <para>Um dynaset parece e se comporta como uma tabela, mas n&#227;o é
+        uma tabela; é uma visualizaç&#227;o dinâmica dos dados de uma ou mais
+        tabelas, selecionados e classificados como especificado pela
+        consulta.</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry>
+      <glossterm>Grade QBE</glossterm>
+
+      <glossdef>
+        <para>Quando voc&#234; usa o modo estrutura (design) para criar sua
+        consulta, voc&#234; utiliza uma ferramenta chamada <emphasis>Consulta
+        Gráfica por Exemplos</emphasis> (<emphasis>Graphical Query By Example
+        - QBE</emphasis>) ou grade QBE; com ela, voc&#234; cria consultas
+        arrastando campos das linhas de campos na parte superior da janela
+        consulta para a grade QBE na parte inferior da janela; na grade QBE,
+        cada coluna contém informaç&#245;es sobre um campo incluído na
+        consulta.</para>
+      </glossdef>
+    </glossentry>
+  </glossary>
+</article>
