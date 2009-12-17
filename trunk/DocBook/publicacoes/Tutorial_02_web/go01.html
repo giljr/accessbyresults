@@ -1,0 +1,60 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Gloss&aacute;rio</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.74.0"><link rel="home" href="index.html" title="Estruturando o Banco de Dados"><link rel="up" href="index.html" title="Estruturando o Banco de Dados"><link rel="prev" href="ar01s09.html" title="9. Recursos"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Gloss&aacute;rio</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s09.html">Anterior</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;</td></tr></table><hr></div><div class="glossary"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1325"></a>Gloss&aacute;rio</h2></div></div></div><dl><dt>Diacr&iacute;tico</dt><dd><p>&Eacute; um sinal gr&aacute;fico que se coloca sob, sobre ou atrav&eacute;s de uma
+        letra para alterar sua realiza&ccedil;&atilde;o fon&eacute;tica, isto &eacute;, seu som, ou
+        para marcar qualquer outra caracter&iacute;stica lingu&iacute;stica; exemplos:
+        acentos em geral, til(~), trema("), cedilha(&ccedil;), etc.</p></dd><dt><a name="chave_primaria"></a>Chave prim&aacute;ria</dt><dd><p>Consiste de um ou mais campos que identifica(m), exclusivamente,
+        cada registro armazenado na tabela. A chave prim&aacute;ria constuma ser um
+        n&uacute;mero ou c&oacute;digo de identifica&ccedil;&atilde;o, uma vez que esse tipo de valor
+        &eacute; sempre diferente para cada registro. Por exemplo, na tabela
+        <span class="emphasis"><em>Ecf</em></span>, cada equipamento emissor de cupom fiscal tem
+        um n&uacute;mero &uacute;nico de identifica&ccedil;&atilde;o, campo NrFabrica&ccedil;&atilde;o; esse
+        campo &eacute; candidato a se tornar a chave prim&aacute;ria daquela tabela; por&eacute;m
+        n&atilde;o o utilizamos como chave prim&aacute;ria, pois que o n&uacute;mero &eacute; longo,
+        dif&iacute;cil de digitar e de lembrar (por exemplo: BE050775610706002265).
+        Optamos por criar uma chave prim&aacute;ria artificial, gerada pelo pr&oacute;prio
+        MS Access: <span class="emphasis"><em>Numera&ccedil;&atilde;o Autom&aacute;tica</em></span>. Como regra
+        geral, usar a <span class="emphasis"><em>Numera&ccedil;&atilde;o Autom&aacute;tica</em></span> &eacute;
+        <span class="emphasis"><em>boa pr&aacute;tica de estrutura&ccedil;&atilde;o de banco de
+        dados</em></span>.</p></dd><dt><a name="chave_externa"></a>Chave externa</dt><dd><p><span class="emphasis"><em>Chave estrageira (Foreign Key)</em></span> tipicamente
+        provem da chave prim&aacute;ria de outra tabela; serve para implementar
+        relacionamentos do tipo <span class="emphasis"><em>um-para-v&aacute;rios</em></span> (mais
+        raramente relacionamento tipo <span class="emphasis"><em>um-para-um</em></span>);
+        exemplo: a tabela <span class="emphasis"><em>ArquivoAutenticado</em></span> possui duas
+        chaves externas (<span class="guimenuitem">CodigoContribuinte</span> e
+        <span class="guimenuitem">CodigoEcf</span>), que implementam as
+        rela&ccedil;&otilde;es entre as tabelas correspondentes e marca a chave
+        prim&aacute;ria m&uacute;ltipla daquela tabela.</p></dd><dt><a name="chave_multipla"></a>Chave prim&aacute;ria m&uacute;ltipla</dt><dd><p><span class="emphasis"><em>Chave prim&aacute;ria de m&uacute;ltiplos campos</em></span> &eacute;
+        apropriada quando a tabela n&atilde;o contiver valores exclus&iacute;vos; da&iacute; a
+        necessidade de se ter mais de um campo como chave prim&aacute;ria. Exemplo: a
+        tabela <span class="emphasis"><em>ArquivoAutenticado</em></span>, n&atilde;o possui campos
+        exclusivos. Dessa forma, escolhemos as chaves externas,
+        <span class="guimenuitem">CodigoContribuinte</span> e
+        <span class="guimenuitem">CodigoEcf</span>, para juntas, funcionarem como
+        chaves prim&aacute;rias (selecionando os dois campos e clicando
+        <span class="guimenuitem">Chave prim&aacute;ria</span> <span class="inlinemediaobject"><img src="images/botao_chave_primaria.gif"></span> no menu principal); agora, cada registro &eacute;
+        individualizado e temos a vantagem de n&atilde;o permitir que um mesmo
+        equipamento de um id&ecirc;ntico contribuinte tenha duas
+        autentica&ccedil;&otilde;es iguais, vez que o MS Access garante que os valores
+        da chave prim&aacute;ria sejam &uacute;nicos.</p></dd><dt><a name="integridade_referencial"></a>Integridade Referencial</dt><dd><p>Ao impor a <span class="emphasis"><em>Integridade referencial</em></span> o MS
+        Access ajuda a assegurar que o relacionamento entre registros sejam
+        v&aacute;lidos e que voc&ecirc; n&atilde;o exclua acidentalmente dados
+        relacionados.</p><p>Quando a <span class="emphasis"><em>integridade referencial</em></span> &eacute; imposta
+        voc&ecirc; precisa observar as seguintes regras: 1) Ao adicionar um
+        registro a uma tabela relacionada e especificar um valor no(s)
+        campo(s) correpondente(s), precisa haver pelo menos um registro com
+        esse valor na tabela prim&aacute;ria e 2) n&atilde;o se pode excluir um
+        registro de uma tabela prim&aacute;ria se ainda existirem registros
+        coincidentes em uma tabela relacionada.</p></dd><dt><a name="dynaset"></a>Dynaset</dt><dd><p>&Eacute; um tipo de registro atualiz&aacute;vel; esses registros podem ser
+        definidos por uma tabela ou consulta a v&aacute;rias tabelas; &eacute; tratado como
+        um objeto no MS Access.</p><p>Um dynaset parece e se comporta como uma tabela, mas n&atilde;o &eacute;
+        uma tabela; &eacute; uma visualiza&ccedil;&atilde;o din&acirc;mica dos dados de uma ou mais
+        tabelas, selecionados e classificados como especificado pela
+        consulta.</p></dd><dt>Grade QBE</dt><dd><p>Quando voc&ecirc; usa o modo estrutura (design) para criar sua
+        consulta, voc&ecirc; utiliza uma ferramenta chamada <span class="emphasis"><em>Consulta
+        Gr&aacute;fica por Exemplos</em></span> (<span class="emphasis"><em>Graphical Query By Example
+        - QBE</em></span>) ou grade QBE; com ela, voc&ecirc; cria consultas
+        arrastando campos das linhas de campos na parte superior da janela
+        consulta para a grade QBE na parte inferior da janela; na grade QBE,
+        cada coluna cont&eacute;m informa&ccedil;&otilde;es sobre um campo inclu&iacute;do na
+        consulta.</p></dd></dl></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s09.html">Anterior</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;</td></tr><tr><td width="40%" align="left" valign="top">9. Recursos&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">In&iacute;cio</a></td><td width="40%" align="right" valign="top">&nbsp;</td></tr></table></div></body></html>

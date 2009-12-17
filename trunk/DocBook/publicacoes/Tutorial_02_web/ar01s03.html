@@ -1,0 +1,54 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>3. Tabelas</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.74.0"><link rel="home" href="index.html" title="Estruturando o Banco de Dados"><link rel="up" href="index.html" title="Estruturando o Banco de Dados"><link rel="prev" href="ar01s02.html" title="2. Abertura do banco de dados"><link rel="next" href="ar01s04.html" title="4. Relacionamentos"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3. Tabelas</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s02.html">Anterior</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s04.html">Pr&oacute;ximo</a></td></tr></table><hr></div><div class="section" lang="pt"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e82"></a>3. Tabelas</h2></div></div></div><div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d0e85"></a>3.1. Contribuinte</h3></div></div></div><p>Para criar a tabela <span class="emphasis"><em>Contribuinte</em></span>:</p><div class="itemizedlist"><ul type="disc"><li><p>Na janela Banco de Dados, na aba <span class="guimenu">Tabelas</span>,
+          clique no assistente <span class="guilabel">Criar tabela no modo Disign;
+          </span></p></li><li><p>Preencha as linhas conforme figura abaixo, prestando especial
+          aten&ccedil;&atilde;o para a 2&ordf; coluna: <span class="guisubmenu">Tipo de
+          dados;</span></p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Importante]" src="images/important.gif"></td><th align="left">Importante</th></tr><tr><td align="left" valign="top"><p>Nomeie os campos <em class="wordasword">ipsis litteris</em>,
+              iniciando-os com letra mai&uacute;scula e sem sinais <a class="link" href="">diacr&iacute;tico</a>s.</p></td></tr></table></div></li><li><p>Selecione a linha <span class="guilabel">CodigoContribuinte</span>,
+          clique em <span class="guimenu"><a class="link" href="go01.html#chave_primaria" title="Chave prim&aacute;ria">Chave
+          Prim&aacute;ria</a></span> <span class="inlinemediaobject"><img src="images/botao_chave_primaria.gif"></span> no menu principal, escolha para
+          <span class="guisubmenu">Tipo de dados</span>: <span class="guisubmenu">Numera&ccedil;&atilde;o
+          Autom&aacute;tica</span>;</p><div class="figure"><a name="Fig01_tab_contribuinte"></a><p class="title"><b>Figura 2. Tabela Contribuinte</b></p><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/t_02_01.bmp" align="middle" alt="Tabela Contribuinte"></div></div></div><p><br class="figure-break"></p></li><li><p>Salve a tabela como <span class="emphasis"><em>Contribuinte</em></span>.</p></li></ul></div></div><div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d0e148"></a>3.2. Ecf</h3></div></div></div><p>Para criar a tabela <span class="emphasis"><em>Ecf</em></span> proceda da mesma
+      forma que a se&ccedil;&atilde;o anterior.</p><p>Use a figura abaixo para gui&aacute;-lo na nomea&ccedil;&atilde;o dos campos e
+      tipo:</p><div class="figure"><a name="Fig02_tab_ecf"></a><p class="title"><b>Figura 3. Tabela Ecf</b></p><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/t_02_02.bmp" align="middle" alt="Tabela Ecf"></div></div></div><p><br class="figure-break"></p><p>Observe o campo em destaque na figura acima: Atualizado.</p><p>Como boa <span class="emphasis"><em>pr&aacute;tica de estrutura&ccedil;&atilde;o de bancos de
+      dados</em></span>, inclu&iacute;mos, tanto na tabela
+      <span class="emphasis"><em>Contribuinte</em></span>, quanto na <span class="emphasis"><em>Ecf</em></span>, o
+      campo <span class="guimenuitem">Atualizado</span>, que ser&aacute; automaticamente
+      preenchido no momento da inser&ccedil;&atilde;o do registro no banco de
+      dados.</p><p>Tal campo serve para fins de rastreabilidade.</p><p>O processo para configura&ccedil;&atilde;o do campo est&aacute; monstrado na
+      figura acima, seguindo os passos:</p><div class="itemizedlist"><ul type="disc"><li><p>com a linha nome do campo
+          <span class="guimenuitem">Atualizado</span> selecionado, clique no
+          bot&atilde;o retic&ecirc;ncia <span class="inlinemediaobject"><img src="images/botao_reticencia.gif"></span> em <span class="guimenuitem">Propriedades do campo :
+          </span> <span class="guimenuitem">Valor padr&atilde;o</span>;</p></li><li><p>no <span class="emphasis"><em>Construtor de express&otilde;es</em></span>, escolha
+          <span class="guimenuitem">Fun&ccedil;&otilde;es</span> &gt;
+          <span class="guimenuitem">Fun&ccedil;&otilde;es internas </span> &gt;
+          <span class="guimenuitem">Data/Hora </span> &gt; <span class="guimenuitem">Data
+          </span>e clique <span class="guibutton">OK</span>.</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Dica]" src="images/tip.gif"></td><th align="left">Dica</th></tr><tr><td align="left" valign="top"><p>Se quiser, digite a f&oacute;rmula <span class="emphasis"><em>Data()
+            </em></span>diretamente na Propriedade do campo <span class="guimenuitem">Valor
+            padr&atilde;o</span>.</p></td></tr></table></div></li></ul></div></div><div class="section" lang="pt"><div class="titlepage"><div><div><h3 class="title"><a name="d0e232"></a>3.3. ArquivoAutenticado</h3></div></div></div><p>A pr&oacute;xima tabela, que armazena as chaves MD5 e SHA1 de cada
+      arquivo autenticado (cada termo possui no m&aacute;ximo 4 espa&ccedil;os para arquivos
+      autenticados), voc&ecirc; cria com o aux&iacute;lio das informa&ccedil;&otilde;es
+      providas na figura abaixo:</p><div class="figure"><a name="d0e237"></a><p class="title"><b>Figura 4. Tabela ArquivoAutenticado</b></p><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/t_02_03.bmp" align="middle" alt="Tabela ArquivoAutenticado"></div></div></div><p><br class="figure-break"></p><p>Repita as opera&ccedil;&otilde;es anteriores.</p><p>Antes de salvar selecione os campos
+      <span class="guimenuitem">CodigoContribuinte</span> e
+      <span class="guimenuitem">CodigoEcf</span> e pressione <span class="guibutton">chave
+      pr&iacute;m&aacute;ria</span> <span class="inlinemediaobject"><img src="images/botao_chave_primaria.gif"></span> no menu principal.</p><p>Salve a tabela como
+      <span class="emphasis"><em>ArquivoAutenticado</em></span>.</p><p>Perceba que a tabela n&atilde;o possui um campo de
+      auto-numera&ccedil;&atilde;o autom&aacute;tica, como as anteriores, visto que
+      implementamos a chave prim&aacute;ria mediante a elei&ccedil;&atilde;o de dois campos:
+      <span class="guimenuitem">CodigoContribuinte</span> e
+      <span class="guimenuitem">CodigoEcf</span>; esses, em conjunto, formam a <a class="link" href="go01.html#chave_multipla" title="Chave prim&aacute;ria m&uacute;ltipla"> chave prim&aacute;ria de m&uacute;ltiplos campos </a> que
+      fazem as vezes da chave prim&aacute;ria auto-numerada, prestando ao mesmo tempo
+      para relacionar a tabela ArquivoAutenticado com as outras
+      tabelas.</p><p>As duas chaves, em conjunto, garantem a identifica&ccedil;&atilde;o do
+      registro como &uacute;nico, uma vez que singulariza o equipamento de um
+      contribuinte certo;</p><p>Um efeito colateral &eacute; que, ao configurarmos dessa maneira a tabela
+      <span class="emphasis"><em>ArquivoAutenticado</em></span>, s&oacute; poderemos entrar uma
+      autentica&ccedil;&atilde;o para cada combina&ccedil;&atilde;o de c&oacute;digos de contribuinte e
+      ecf; teremos a certeza que n&atilde;o haver&aacute; registros id&ecirc;nticos
+      quando as duas chaves identificar o equipamento daquele
+      contribuinte.</p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Importante]" src="images/important.gif"></td><th align="left">Importante</th></tr><tr><td align="left" valign="top"><p>Dever&aacute; haver compatibilidade entre as <a class="link" href="go01.html#chave_primaria" title="Chave prim&aacute;ria">chaves prim&aacute;ria</a> e <a class="link" href="go01.html#chave_externa" title="Chave externa">externa</a>; na tabela ArquivoAutenticado,
+        os campos CodigoContribuinte e CodigoEcf (tamb&eacute;m chaves externas)
+        s&atilde;o do Tipo de dados n&uacute;mero inteiro longo e s&atilde;o compat&iacute;veis
+        com o tipo de dados das respectivas chaves prim&aacute;rias, que possuem
+        Numera&ccedil;&atilde;o Autom&aacute;tica (nas respectivas tabelas prim&aacute;rias).</p></td></tr></table></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s02.html">Anterior</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s04.html">Pr&oacute;ximo</a></td></tr><tr><td width="40%" align="left" valign="top">2. Abertura do banco de dados&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">In&iacute;cio</a></td><td width="40%" align="right" valign="top">&nbsp;4. Relacionamentos</td></tr></table></div></body></html>
